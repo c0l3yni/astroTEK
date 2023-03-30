@@ -7,7 +7,7 @@ public class LandingViewCalibrator extends Calibrator{
     private final LandingView actual;
     private final LandingViewExpected expected;
 
-    protected LandingViewCalibrator(LandingViewExpected expected, LandingView actual) {
+    private LandingViewCalibrator(LandingViewExpected expected, LandingView actual) {
         super(DESCRIPTION, expected, actual);
         this.actual = actual;
         this.expected = expected;
