@@ -1,4 +1,4 @@
-package com.tekgs.nextgen.duckies.view.landing;
+package com.tekgs.astro.landing;
 
 public class LandingViewExpected implements LandingViewCalibratable{
     public static LandingViewExpected getInstance() {
@@ -6,7 +6,7 @@ public class LandingViewExpected implements LandingViewCalibratable{
     }
 
     @Override
-    public String getLandingMessage() {
-        return "Welcome, Here is your SIGN to read the STARS!";
+    public String getTitle() {
+        return "Home";
     }
 }

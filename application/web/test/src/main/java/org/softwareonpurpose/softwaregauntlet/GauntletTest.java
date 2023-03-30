@@ -90,13 +90,18 @@ public abstract class GauntletTest {
     }
 
     public enum View {
-        ;
-        public static final String HOME_PAGE = "home-page";
+    ;
+        public static final String LANDING = "landing";
+
     }
 
     public enum Application {
+      ;
+        public static final String ASTRO_TEK = "AstroTEK";
+    }
+
+    public enum Data {
         ;
-        public static final String ASTRO_TEK = "astrology TEK";
     }
 
     public static class TestSuite {

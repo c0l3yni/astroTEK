@@ -1,9 +1,12 @@
-package com.tekgs.nextgen.duckies.view.landing;
+package com.tekgs.astro.view.landing;
 
+import com.tekgs.astro.landing.LandingViewCalibrator;
+import com.tekgs.astro.landing.LandingView;
+import com.tekgs.astro.landing.LandingViewExpected;
 import org.softwareonpurpose.softwaregauntlet.GauntletTest;
 import org.testng.annotations.Test;
 
-@Test(groups = {GauntletTest.Application.ASTRO_TEK, GauntletTest.View.HOME_PAGE})
+@Test(groups = {GauntletTest.Application.ASTRO_TEK, GauntletTest.View.LANDING})
 public class LandingViewTests extends GauntletTest {
 
     @Test(groups = {TestSuite.SMOKE, TestSuite.DEBUG})

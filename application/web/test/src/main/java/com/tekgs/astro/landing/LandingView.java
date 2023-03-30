@@ -1,24 +1,22 @@
-package com.tekgs.nextgen.duckies.view.landing;
+package com.tekgs.astro.landing;
+
 import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;
 import com.softwareonpurpose.uinavigator.UiView;
 
 public class LandingView extends UiView implements LandingViewCalibratable{
-    private static final String LOCATOR_VALUE = "landing-page";
+    private static final String RELATIVE_URI = "landing";
+    private static final String DESCRIPTION = "'Landing' View";
     private static final String LOCATOR_TYPE = UiLocatorType.ID;
-    private static final String RELATIVE_URI = "landing-page";
+    private static final String LOCATOR_VALUE = "landing";
 
-    public LandingView() {
-        super(RELATIVE_URI, UiElement.getInstance("'Landing' View", LOCATOR_TYPE, LOCATOR_VALUE));
+    protected LandingView() {
+        super(RELATIVE_URI, UiElement.getInstance(DESCRIPTION, LOCATOR_TYPE, LOCATOR_VALUE));
     }
 
     public static LandingView directNav() {
         new LandingView().load();
         return UiView.expect(LandingView.class);
-    }
-
-    private UiElement getLandingMessageElement() {
-        return UiElement.getInstance("Landing view", UiLocatorType.ID, "landing", this.getElement());
     }
 
     @Override
@@ -27,7 +25,11 @@ public class LandingView extends UiView implements LandingViewCalibratable{
     }
 
     @Override
-    public String getLandingMessage() {
-        return getLandingMessageElement().getText();
+    public String getTitle() {
+        return getTitleElement().getText();
+    }
+
+    private UiElement getTitleElement() {
+        return UiElement.getInstance("Landing", UiLocatorType.ID, "landing", this.getElement());
     }
 }
