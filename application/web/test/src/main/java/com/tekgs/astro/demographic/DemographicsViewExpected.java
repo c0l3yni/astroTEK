@@ -1,0 +1,12 @@
+package com.tekgs.astro.demographic;
+
+public class DemographicsViewExpected implements DemographicsViewCalibratable {
+
+    public static DemographicsViewExpected getInstance() {
+        return new DemographicsViewExpected();
+    }
+    @Override
+    public String getInputFormTitle() {
+        return "Demographics";
+    }
+}

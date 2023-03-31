@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import TitleRegion from "../region/TitleRegion";
 
 function LoginView() {
-  return (
-    <div id='login-view'>
-        <div id='login'>Login</div>  
-    </div>
-  )
+	return (
+		<div id="login-view">
+			<TitleRegion title="Login" />
+		</div>
+	);
 }
 
-export default LoginView
+export default LoginView;

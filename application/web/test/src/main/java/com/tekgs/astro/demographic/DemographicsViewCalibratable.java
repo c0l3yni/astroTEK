@@ -1,5 +1,5 @@
 package com.tekgs.astro.demographic;
 
-public interface DemographicViewCalibratable {
+public interface DemographicsViewCalibratable {
     String getInputFormTitle();
 }

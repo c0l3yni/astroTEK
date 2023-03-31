@@ -2,19 +2,19 @@ package com.tekgs.astro.demographic;
 
 import com.softwareonpurpose.calibrator4test.Calibrator;
 
-public class DemographicViewCalibrator extends Calibrator {
+public class DemographicsViewCalibrator extends Calibrator {
     private static final String DESCRIPTION = "'Demographic Information Input' View";
-    private final DemographicView actual;
-    private final DemographicViewExpected expected;
+    private final DemographicsView actual;
+    private final DemographicsViewExpected expected;
 
-    private DemographicViewCalibrator(DemographicViewExpected expected, DemographicView actual) {
+    private DemographicsViewCalibrator(DemographicsViewExpected expected, DemographicsView actual) {
         super(DESCRIPTION, expected, actual);
         this.actual = actual;
         this.expected = expected;
     }
 
-    public static DemographicViewCalibrator getInstance(DemographicViewExpected expected, DemographicView actual) {
-        return new DemographicViewCalibrator(expected, actual);
+    public static DemographicsViewCalibrator getInstance(DemographicsViewExpected expected, DemographicsView actual) {
+        return new DemographicsViewCalibrator(expected, actual);
     }
 
     @Override
