@@ -96,6 +96,7 @@ public abstract class GauntletTest {
         public static final String LOGIN = "login";
         public static final String DEMOGRAPHIC = "demographic";
         public static final String CHART = "chart";
+        public static final String HOROSCOPE = "horoscope";
     }
 
     public enum Application {
