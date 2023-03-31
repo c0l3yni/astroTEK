@@ -1,6 +1,7 @@
 package com.tekgs.astro.landing;
 
 public class LandingViewExpected implements LandingViewCalibratable{
+
     public static LandingViewExpected getInstance() {
         return new LandingViewExpected();
     }
