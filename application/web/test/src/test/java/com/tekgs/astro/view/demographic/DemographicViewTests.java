@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 @Test(groups = {GauntletTest.Application.ASTRO_TEK, GauntletTest.View.DEMOGRAPHIC})
 public class DemographicViewTests extends GauntletTest{
-    @Test(groups = {TestSuite.SMOKE, TestSuite.DEBUG})
+    @Test(groups = {TestSuite.SMOKE})
     public void smoke() {
         DemographicViewExpected expected = DemographicViewExpected.getInstance();
         DemographicView actual = DemographicView.directNav();
