@@ -19,6 +19,6 @@ public class LandingViewCalibrator extends Calibrator{
 
     @Override
     protected void executeVerifications() {
-            verify("Landing", expected.getTitle(), actual.getTitle());
+            verify("Landing View message", expected.getTitle(), actual.getTitle());
     }
 }
