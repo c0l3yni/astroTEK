@@ -2,7 +2,9 @@ import React from 'react'
 
 function LandingView() {
   return (
-    <div id='landing'>Welcome, Here is your SIGN to read the STARS!</div>
+    <div id='landing-view'>
+      <div id='landing'>Home</div>
+    </div>
   )
 }
 
