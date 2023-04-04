@@ -6,11 +6,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
 
-public class ListCalibrator<I, C> extends Calibrator {
+public abstract class ListCalibrator<I, C> extends Calibrator {
     private final Class<I> childCalibratable;
     private final Class<C> childCalibrator;
     
-    protected ListCalibrator(String description, Object expected, Object actual, Class<I> childCalibratable, Class<C> childCalibrator) {
+    private ListCalibrator(String description, Object expected, Object actual, Class<I> childCalibratable, Class<C> childCalibrator) {
         super(description, expected, actual);
         this.childCalibrator = childCalibrator;
         this.childCalibratable = childCalibratable;

@@ -3,9 +3,10 @@ package com.tekgs.astro.view.landing;
 import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;
 import com.softwareonpurpose.uinavigator.UiView;
+import com.tekgs.astro.view.login.LoginView;
 import org.softwareonpurpose.softwaregauntlet.Environment;
 
-public class LandingView extends UiView implements LandingViewCalibratable{
+public class LandingView extends UiView implements LandingViewCalibratable {
     private static final String DESCRIPTION = "'Landing' View";
     private static final String RELATIVE_URI = "landing";
     private static final String DOMAIN_URI = Environment.getInstance().getDomainURL();
@@ -21,17 +22,27 @@ public class LandingView extends UiView implements LandingViewCalibratable{
         return UiView.expect(LandingView.class);
     }
 
-    @Override
-    protected boolean confirmElementStates() {
-        return this.getElement().waitUntilVisible();
+    private UiElement getTitleElement() {
+        return UiElement.getInstance("Landing", UiLocatorType.ID, "landing", this.getElement());
     }
-
+    
+    public LoginView toLoginView() {
+        this.getNavToLoginElement().click();
+        return UiView.expect(LoginView.class);
+    }
+    
+    private UiElement getNavToLoginElement() {
+        return UiElement.getInstance("link to 'Login View'", "nav-to-login", UiLocatorType.ID, this.getElement());
+    }
+    
     @Override
     public String getTitle() {
         return getTitleElement().getText();
     }
-
-    private UiElement getTitleElement() {
-        return UiElement.getInstance("Landing", UiLocatorType.ID, "landing", this.getElement());
+    
+    @Override
+    protected boolean confirmElementStates() {
+        return this.getElement().waitUntilVisible();
     }
+    
 }

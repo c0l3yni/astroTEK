@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 @Test (groups = {GauntletTest.Application.ASTRO_TEK, GauntletTest.View.HOROSCOPE})
 public class HoroscopeViewTests extends GauntletTest {
 
-    @Test(groups = {TestSuite.SMOKE, TestSuite.DEBUG})
+    @Test(groups = {TestSuite.SMOKE})
     public void smoke() {
         HoroscopeViewExpected expected = HoroscopeViewExpected.getInstance();
         HoroscopeView actual = HoroscopeView.directNav();
