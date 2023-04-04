@@ -7,7 +7,7 @@ import org.softwareonpurpose.softwaregauntlet.Environment;
 
 public class DemographicsView extends UiView implements DemographicsViewCalibratable {
     private static final String DESCRIPTION = "'Demographics' View";
-    private static final String RELATIVE_URI = "demographic";
+    private static final String RELATIVE_URI = "demographics";
     private static final String DOMAIN_URI = Environment.getInstance().getDomainURL();
     private static final String LOCATOR_TYPE = UiLocatorType.ID;
     private static final String LOCATOR_VALUE = "demographics-view";
