@@ -1,28 +1,28 @@
-package com.tekgs.astro.view.compatabilitycalc;
+package com.tekgs.astro.view.compatability;
 
 import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;
 import com.softwareonpurpose.uinavigator.UiView;
 import org.softwareonpurpose.softwaregauntlet.Environment;
 
-public class CompatibilityCalcView extends UiView implements CompatibilityCalcViewCalibratable {
-    private static final String DESCRIPTION = "'Compatability Calculator' View";
+public class CompatibilityView extends UiView implements CompatibilityViewCalibratable {
+    private static final String DESCRIPTION = "'Compatability' View";
     private static final String RELATIVE_URI = "compatability";
     private static final String DOMAIN_URI = Environment.getInstance().getDomainURL();
     private static final String LOCATOR_TYPE = UiLocatorType.ID;
     private static final String LOCATOR_VALUE = "compatability-view";
 
-    public CompatibilityCalcView() {
+    public CompatibilityView() {
         super(String.format("%s/%s", DOMAIN_URI, RELATIVE_URI), UiElement.getInstance(DESCRIPTION, LOCATOR_TYPE, LOCATOR_VALUE));
     }
 
-    public static CompatibilityCalcView getInstance() {
-        return new CompatibilityCalcView();
+    public static CompatibilityView getInstance() {
+        return new CompatibilityView();
     }
 
-    public static CompatibilityCalcView directNav() {
-        new CompatibilityCalcView().load();
-        return UiView.expect(CompatibilityCalcView.class);
+    public static CompatibilityView directNav() {
+        new CompatibilityView().load();
+        return UiView.expect(CompatibilityView.class);
     }
 
     @Override
