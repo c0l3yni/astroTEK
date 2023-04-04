@@ -2,6 +2,7 @@ package org.softwareonpurpose.softwaregauntlet;
 
 import com.softwareonpurpose.calibrator4test.Calibrator;
 import com.softwareonpurpose.uinavigator.web.WebUiHost;
+import com.tekgs.astro.behavior.ToStringBehavior;
 import org.apache.commons.io.FileUtils;
 import org.softwareonpurpose.coverage4test.CoverageReport;
 import org.testng.Assert;
@@ -22,19 +23,19 @@ public abstract class GauntletTest {
     private final List<String> requirements = new ArrayList<>();
     private String feature;
     private String testName;
-
+    
     @BeforeClass(alwaysRun = true)
     protected void initialize() {
         feature = this.getClass().getSimpleName().replace("Tests", "");
     }
-
+    
     @BeforeMethod(alwaysRun = true)
     protected void initializeTest(Method method) {
         driverInstantiation();
         testName = method.getName();
         System.out.printf("Executing %s...%n", testName);
     }
-
+    
     @AfterMethod(alwaysRun = true)
     protected void terminateTest(ITestResult result) {
         Object[] scenarios = result.getParameters();
@@ -49,7 +50,7 @@ public abstract class GauntletTest {
         }
         WebUiHost.quitInstance();
     }
-
+    
     @AfterClass(alwaysRun = true)
     protected synchronized void reportClass() {
         String coverageFolder = "build/reports/coverage";
@@ -63,52 +64,61 @@ public abstract class GauntletTest {
             e.printStackTrace();
         }
     }
-
+    
     protected void when() {
         System.out.printf("WHEN:%n");
     }
-
-    protected void given(Object... testData) {
-        String keyWord = "GIVEN";
-        for (Object dataItem : testData) {
-            String dataDescription = dataItem == null ? "<NULL>" : dataItem.toString();
-            System.out.printf("%s: %s%n", keyWord, dataDescription);
-            keyWord = "  AND";
-        }
+    
+    /*
+    * Original version for printing numerous 'givens' <- refactor
+    */
+//    protected void given(Object... testData) {
+//        String keyWord = "GIVEN";
+//        for (Object dataItem : testData) {
+//            String dataDescription = dataItem == null ? "<NULL>" : dataItem.toString();
+//            System.out.printf("%s: %s%n", keyWord, dataDescription);
+//            keyWord = "  AND";
+//        }
+//    }
+    
+    protected void given(Object testData) {
+        String testDataDescription = testData == null ? "<NULL>" : ToStringBehavior.getInstance(testData).execute();
+        System.out.printf("GIVEN:%n%s", testData == null ? "" : testData.getClass().getSimpleName());
+        System.out.println(testDataDescription);
     }
-
+    
     protected void then(Calibrator calibrator) {
         Assert.assertEquals(calibrator.calibrate(), Calibrator.SUCCESS);
     }
-
+    
     protected void addRequirements(String... requirements) {
         this.requirements.addAll(Arrays.asList(requirements));
     }
-
+    
     protected void driverInstantiation() {
         WebUiHost.getInstance(ChromeUiDriver.getInstance());
     }
-
+    
     public enum View {
-    ;
+        ;
         public static final String LANDING = "landing";
-
+        
         public static final String LOGIN = "login";
         public static final String DEMOGRAPHIC = "demographic";
         public static final String CHART = "chart";
         public static final String HOROSCOPE = "horoscope";
         public static final String COMPATIBILITY_CALC = "compatability-calc";
     }
-
+    
     public enum Application {
-      ;
+        ;
         public static final String ASTRO_TEK = "AstroTEK";
     }
-
+    
     public enum Data {
         ;
     }
-
+    
     public static class TestSuite {
         public static final String SMOKE = "smoke";
         public static final String RELEASE = "release";
