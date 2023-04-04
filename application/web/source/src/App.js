@@ -1,11 +1,11 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import LandingView from "./landing/LandingView";
-import LoginView from "./login/LoginView";
-import DemographicsView from "./demographic/DemographicsView";
-import ChartView from "./chart/ChartView";
-import HoroscopeView from "./horoscope/HoroscopeView";
-import CompatabilityView from "./compatability/CompatabilityView";
+import LandingView from "./view/landing/LandingView";
+import LoginView from "./view/login/LoginView";
+import DemographicsView from "./view/demographic/DemographicsView";
+import ChartView from "./view/chart/ChartView";
+import HoroscopeView from "./view/horoscope/HoroscopeView";
+import CompatabilityView from "./view/compatability/CompatabilityView";
 
 function App() {
 	return (

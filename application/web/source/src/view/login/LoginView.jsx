@@ -1,5 +1,5 @@
 import React from "react";
-import TitleRegion from "../region/TitleRegion";
+import TitleRegion from "../../region/TitleRegion";
 
 function LoginView() {
 	return (
