@@ -1,8 +1,5 @@
 package com.tekgs.astro.view.landing;
 
-import com.tekgs.astro.landing.LandingViewCalibrator;
-import com.tekgs.astro.landing.LandingView;
-import com.tekgs.astro.landing.LandingViewExpected;
 import org.softwareonpurpose.softwaregauntlet.GauntletTest;
 import org.testng.annotations.Test;
 

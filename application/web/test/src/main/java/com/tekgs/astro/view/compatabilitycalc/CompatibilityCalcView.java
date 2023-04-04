@@ -1,4 +1,4 @@
-package com.tekgs.astro.compatabilitycalc;
+package com.tekgs.astro.view.compatabilitycalc;
 
 import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;

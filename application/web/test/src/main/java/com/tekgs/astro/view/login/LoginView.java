@@ -1,4 +1,4 @@
-package com.tekgs.astro.login;
+package com.tekgs.astro.view.login;
 
 import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;

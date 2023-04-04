@@ -1,8 +1,5 @@
 package com.tekgs.astro.view.demographic;
 
-import com.tekgs.astro.demographic.DemographicsView;
-import com.tekgs.astro.demographic.DemographicsViewCalibrator;
-import com.tekgs.astro.demographic.DemographicsViewExpected;
 import org.softwareonpurpose.softwaregauntlet.GauntletTest;
 import org.testng.annotations.Test;
 

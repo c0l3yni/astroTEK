@@ -1,4 +1,4 @@
-package com.tekgs.astro.login;
+package com.tekgs.astro.view.login;
 
 public class LoginViewExpected implements LoginViewCalibratable {
 

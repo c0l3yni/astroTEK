@@ -1,4 +1,4 @@
-package com.tekgs.astro.landing;
+package com.tekgs.astro.view.landing;
 
 import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;

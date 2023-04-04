@@ -1,4 +1,4 @@
-package com.tekgs.astro.chart;
+package com.tekgs.astro.view.chart;
 
 public interface ChartViewCalibratable {
     String getChartViewTitle();

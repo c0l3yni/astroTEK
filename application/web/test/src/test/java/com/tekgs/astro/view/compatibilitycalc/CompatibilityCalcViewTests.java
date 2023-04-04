@@ -1,8 +1,8 @@
 package com.tekgs.astro.view.compatibilitycalc;
 
-import com.tekgs.astro.compatabilitycalc.CompatibilityCalcView;
-import com.tekgs.astro.compatabilitycalc.CompatibilityCalcViewCalibrator;
-import com.tekgs.astro.compatabilitycalc.CompatibilityCalcViewExpected;
+import com.tekgs.astro.view.compatabilitycalc.CompatibilityCalcView;
+import com.tekgs.astro.view.compatabilitycalc.CompatibilityCalcViewCalibrator;
+import com.tekgs.astro.view.compatabilitycalc.CompatibilityCalcViewExpected;
 import org.softwareonpurpose.softwaregauntlet.GauntletTest;
 import org.testng.annotations.Test;
 

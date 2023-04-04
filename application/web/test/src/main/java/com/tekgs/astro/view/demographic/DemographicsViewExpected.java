@@ -1,4 +1,4 @@
-package com.tekgs.astro.demographic;
+package com.tekgs.astro.view.demographic;
 
 public class DemographicsViewExpected implements DemographicsViewCalibratable {
 

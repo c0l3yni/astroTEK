@@ -1,8 +1,5 @@
 package com.tekgs.astro.view.chart;
 
-import com.tekgs.astro.chart.ChartView;
-import com.tekgs.astro.chart.ChartViewCalibrator;
-import com.tekgs.astro.chart.ChartViewExpected;
 import org.softwareonpurpose.softwaregauntlet.GauntletTest;
 import org.testng.annotations.Test;
 

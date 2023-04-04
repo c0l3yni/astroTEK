@@ -1,4 +1,4 @@
-package com.tekgs.astro.compatabilitycalc;
+package com.tekgs.astro.view.compatabilitycalc;
 
 import com.softwareonpurpose.calibrator4test.Calibrator;
 

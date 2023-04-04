@@ -1,4 +1,4 @@
-package com.tekgs.astro.demographic;
+package com.tekgs.astro.view.demographic;
 
 import com.softwareonpurpose.calibrator4test.Calibrator;
 

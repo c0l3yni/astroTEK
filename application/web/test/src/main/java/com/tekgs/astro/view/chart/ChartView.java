@@ -1,4 +1,4 @@
-package com.tekgs.astro.chart;
+package com.tekgs.astro.view.chart;
 
 import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;

@@ -1,4 +1,4 @@
-package com.tekgs.astro.horoscope;
+package com.tekgs.astro.view.horoscope;
 
 import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;

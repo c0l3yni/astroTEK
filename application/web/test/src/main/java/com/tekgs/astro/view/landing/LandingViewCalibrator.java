@@ -1,4 +1,4 @@
-package com.tekgs.astro.landing;
+package com.tekgs.astro.view.landing;
 
 import com.softwareonpurpose.calibrator4test.Calibrator;
 

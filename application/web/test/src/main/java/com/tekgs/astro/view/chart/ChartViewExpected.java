@@ -1,4 +1,4 @@
-package com.tekgs.astro.chart;
+package com.tekgs.astro.view.chart;
 
 public class ChartViewExpected implements ChartViewCalibratable{
     public static ChartViewExpected getInstance() {

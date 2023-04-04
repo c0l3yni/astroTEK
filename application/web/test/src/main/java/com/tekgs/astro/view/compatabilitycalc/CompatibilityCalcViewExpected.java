@@ -1,4 +1,4 @@
-package com.tekgs.astro.compatabilitycalc;
+package com.tekgs.astro.view.compatabilitycalc;
 
 public class CompatibilityCalcViewExpected implements CompatibilityCalcViewCalibratable{
     public static CompatibilityCalcViewExpected getInstance() {

@@ -1,4 +1,4 @@
-package com.tekgs.astro.horoscope;
+package com.tekgs.astro.view.horoscope;
 
 public class HoroscopeViewExpected implements HoroscopeViewCalibratable{
     public static HoroscopeViewExpected getInstance() {

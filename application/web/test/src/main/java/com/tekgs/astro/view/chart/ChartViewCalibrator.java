@@ -1,4 +1,4 @@
-package com.tekgs.astro.chart;
+package com.tekgs.astro.view.chart;
 
 import com.softwareonpurpose.calibrator4test.Calibrator;
 
