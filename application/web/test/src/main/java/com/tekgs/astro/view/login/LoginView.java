@@ -3,7 +3,6 @@ package com.tekgs.astro.view.login;
 import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;
 import com.softwareonpurpose.uinavigator.UiView;
-import com.tekgs.astro.behavior.ToStringBehavior;
 import org.softwareonpurpose.softwaregauntlet.Environment;
 
 public class LoginView extends UiView implements LoginViewCalibratable {
