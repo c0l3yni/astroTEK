@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 @Test(groups = {GauntletTest.Application.ASTRO_TEK, GauntletTest.View.LOGIN})
 public class LoginViewTests extends GauntletTest {
 
-    @Test(groups = {TestSuite.SMOKE})
+    @Test(groups = {TestSuite.SMOKE, TestSuite.DEBUG})
     public void smoke() {
         LoginViewExpected expected = LoginViewExpected.getInstance();
         LoginView actual = LoginView.directNav();

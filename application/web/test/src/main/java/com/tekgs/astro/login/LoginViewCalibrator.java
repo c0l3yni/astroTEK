@@ -1,6 +1,7 @@
 package com.tekgs.astro.login;
 
 import com.softwareonpurpose.calibrator4test.Calibrator;
+import com.tekgs.astro.login.loginregion.LoginRegionCalibrator;
 
 public class LoginViewCalibrator extends Calibrator {
 
@@ -12,6 +13,7 @@ public class LoginViewCalibrator extends Calibrator {
         super(DESCRIPTION, expected, actual);
         this.actual = actual;
         this.expected = expected;
+        addChildCalibrator(LoginRegionCalibrator.getInstance(expected.inLoginRegion(), actual.inLoginRegion()));
     }
 
     public static LoginViewCalibrator getInstance(LoginViewExpected expected, LoginView actual) {
