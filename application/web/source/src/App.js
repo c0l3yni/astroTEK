@@ -7,6 +7,7 @@ import ChartView from "./chart/ChartView";
 import HoroscopeView from "./horoscope/HoroscopeView";
 import CompatabilityView from "./compatability/CompatabilityView";
 import './app.css'
+import MemberLandingView from "./memberlanding/MemberLandingView";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 				<Route path="/chart" element={<ChartView />} />
 				<Route path="/horoscope" element={<HoroscopeView />} />
 				<Route path="/compatability" element={<CompatabilityView />} />
+				<Route path="/member-landing" element={<MemberLandingView />} />
 			</Routes>
 		</div>
 	);
