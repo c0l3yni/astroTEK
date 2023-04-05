@@ -1,5 +1,6 @@
 package com.tekgs.astro.view.demographic;
 
+import com.tekgs.astro.view.landing.LandingView;
 import org.softwareonpurpose.softwaregauntlet.GauntletTest;
 import org.testng.annotations.Test;
 
@@ -9,6 +10,13 @@ public class DemographicsViewTests extends GauntletTest{
     public void smoke() {
         DemographicsViewExpected expected = DemographicsViewExpected.getInstance();
         DemographicsView actual = DemographicsView.directNav();
+        then(DemographicsViewCalibrator.getInstance(expected, actual));
+    }
+    
+    @Test(groups = {TestSuite.ACCEPTANCE, TestSuite.DEBUG}, dependsOnMethods = "smoke")
+    public void fromLandingView() {
+        DemographicsViewExpected expected = DemographicsViewExpected.getInstance();
+        DemographicsView actual = LandingView.directNav().toDemographicsView();
         then(DemographicsViewCalibrator.getInstance(expected, actual));
     }
 }

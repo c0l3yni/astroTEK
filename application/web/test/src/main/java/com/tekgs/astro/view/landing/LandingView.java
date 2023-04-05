@@ -3,6 +3,7 @@ package com.tekgs.astro.view.landing;
 import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;
 import com.softwareonpurpose.uinavigator.UiView;
+import com.tekgs.astro.view.demographic.DemographicsView;
 import com.tekgs.astro.view.login.LoginView;
 import org.softwareonpurpose.softwaregauntlet.Environment;
 
@@ -34,9 +35,14 @@ public class LandingView extends UiView implements LandingViewCalibratable {
     private UiElement getNavToLoginElement() {
         return UiElement.getInstance("link to 'Login View'", UiLocatorType.ID,"nav-to-login",  this.getElement());
     }
-    @Override
-    public String getNavToLogin() {
-        return getTitleElement().getText();
+    
+    public DemographicsView toDemographicsView() {
+        this.getNavToDemographicsElement().click();
+        return UiView.expect(DemographicsView.class);
+    }
+    
+    private UiElement getNavToDemographicsElement() {
+        return UiElement.getInstance("link to 'Demographics View", UiLocatorType.ID, "nav-to-demographics", this.getElement());
     }
     
     @Override

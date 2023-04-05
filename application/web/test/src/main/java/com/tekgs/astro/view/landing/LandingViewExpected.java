@@ -13,9 +13,4 @@ public class LandingViewExpected implements LandingViewCalibratable{
     public String getTitle() {
         return "Home";
     }
-
-    @Override
-    public String getNavToLogin() {
-        return "Login";
-    }
 }
