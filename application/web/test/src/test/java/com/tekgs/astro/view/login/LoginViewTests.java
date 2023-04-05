@@ -1,6 +1,5 @@
 package com.tekgs.astro.view.login;
 
-import com.tekgs.astro.behavior.ToStringBehavior;
 import com.tekgs.astro.view.landing.LandingView;
 import org.softwareonpurpose.softwaregauntlet.GauntletTest;
 import org.testng.annotations.Test;
@@ -19,9 +18,6 @@ public class LoginViewTests extends GauntletTest {
     public void fromLandingView() {
         LoginViewExpected expected = LoginViewExpected.getInstance();
         LoginView actual = LandingView.directNav().toLoginView();
-        System.out.println("\n======================== actual (LoginView) ========================\n");
-        System.out.println(ToStringBehavior.getInstance(actual).execute());
-        System.out.println("\n======================== actual (LoginView) ========================\n");
         then(LoginViewCalibrator.getInstance(expected, actual));
     }
 }

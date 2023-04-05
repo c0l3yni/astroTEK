@@ -32,7 +32,11 @@ public class LandingView extends UiView implements LandingViewCalibratable {
     }
     
     private UiElement getNavToLoginElement() {
-        return UiElement.getInstance("link to 'Login View'", "nav-to-login", UiLocatorType.ID, this.getElement());
+        return UiElement.getInstance("link to 'Login View'", UiLocatorType.ID,"nav-to-login",  this.getElement());
+    }
+    @Override
+    public String getNavToLogin() {
+        return getTitleElement().getText();
     }
     
     @Override

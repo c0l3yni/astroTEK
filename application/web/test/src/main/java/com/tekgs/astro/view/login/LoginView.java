@@ -31,17 +31,8 @@ public class LoginView extends UiView implements LoginViewCalibratable {
         return getLoginTitleElement().getText();
     }
     
-//    @Override
-//    protected boolean confirmElementStates() {
-//        UiElement landingElement = UiElement.getInstance("Landing", UiLocatorType.ID, "landing");
-//        return this.getElement().waitUntilVisible() && !landingElement.isDisplayed();
-//    }
-    
     @Override
     protected boolean confirmElementStates() {
-        System.out.println("\n======================== this ========================\n");
-        System.out.println(ToStringBehavior.getInstance(this.getElement().isDisplayed()).execute());
-        System.out.println("\n======================== this ========================\n");
         return this.getElement().waitUntilVisible();
     }
 }
