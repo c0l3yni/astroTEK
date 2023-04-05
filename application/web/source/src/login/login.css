@@ -1,0 +1,47 @@
+/* if you are Thomas and looking at this I knowwww you don't have to say it */
+
+.login-view {
+  background-color: var(--background);
+  width: 50%;
+}
+
+form {
+  background-color: var(--box);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.row {
+  align-items: center;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 200px;
+  padding: 5px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  justify-content: center;
+  width: 30%;
+}
+
+span {
+  color: var(--text);
+}
+
+button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 8px;
+  margin: 15px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: large;
+  font-weight: 700;
+}
+
+button:hover {
+  opacity: 0.5;
+}

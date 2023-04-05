@@ -6,6 +6,7 @@ import DemographicsView from "./demographic/DemographicsView";
 import ChartView from "./chart/ChartView";
 import HoroscopeView from "./horoscope/HoroscopeView";
 import CompatabilityView from "./compatability/CompatabilityView";
+import './app.css'
 
 function App() {
 	return (
