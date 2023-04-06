@@ -1,4 +1,4 @@
-package com.tekgs.astro.data.user.product;
+package com.tekgs.astro.data.user;
 
 @SuppressWarnings("unused")
 public class UserDefinition implements UserCalibratable {

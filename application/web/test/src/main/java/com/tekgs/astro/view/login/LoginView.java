@@ -3,6 +3,7 @@ package com.tekgs.astro.view.login;
 import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;
 import com.softwareonpurpose.uinavigator.UiView;
+import com.tekgs.astro.data.user.User;
 import com.tekgs.astro.view.login.loginregion.LoginRegion;
 import org.softwareonpurpose.softwaregauntlet.Environment;
 
@@ -16,9 +17,12 @@ public class LoginView extends UiView implements LoginViewCalibratable {
     public LoginView() {
         super(String.format("%s/%s", DOMAIN_URI, RELATIVE_URI), UiElement.getInstance(DESCRIPTION, LOCATOR_TYPE, LOCATOR_VALUE));
     }
-
     public static LoginView directNav() {
         new LoginView().load();
+        return UiView.expect(LoginView.class);
+    }
+    public static LoginView directNav(User loginData) {
+        new LoginView().load(String.format("?username=%s&?password=%s", loginData.getUsername(), loginData.getPassword()));
         return UiView.expect(LoginView.class);
     }
 

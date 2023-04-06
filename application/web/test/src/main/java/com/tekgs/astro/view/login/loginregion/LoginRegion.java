@@ -33,10 +33,23 @@ public class LoginRegion extends UiRegion implements LoginRegionCalibratable {
     private UiElement getSubmitButtonElement() {
         return UiElement.getInstance("form submit button", UiLocatorType.ID, "submit-button", this.getElement());
     }
+    private UiElement getSuccessfulLoginMessageElement() {
+        return UiElement.getInstance("Success message", UiLocatorType.ID, "success", this.getElement());
+    }
+//    @Override
+//    public boolean isUsernameFieldDisplayed() {
+//        String isDisabled = getUsernameFieldElement().getAttribute("disabled");
+//        return isDisabled == null;
+//    }
     @Override
     public String getUsernameField() {
         return getUsernameFieldElement().getText();
     }
+
+//    @Override
+//    public String getSuccessfulLoginMessage() {
+//        return getSuccessfulLoginMessageElement().getText();
+//    }
 
     @Override
     public String getPasswordField() {

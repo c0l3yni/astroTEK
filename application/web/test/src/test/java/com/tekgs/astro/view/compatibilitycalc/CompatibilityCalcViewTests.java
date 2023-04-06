@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 @Test(groups = {GauntletTest.Application.ASTRO_TEK, GauntletTest.View.COMPATIBILITY_CALC})
 public class CompatibilityCalcViewTests extends GauntletTest{
 
-    @Test(groups = {TestSuite.SMOKE, TestSuite.DEBUG})
+    @Test(groups = {TestSuite.SMOKE})
     public void smoke() {
         CompatibilityCalcViewExpected expected = CompatibilityCalcViewExpected.getInstance();
         CompatibilityCalcView actual = CompatibilityCalcView.directNav();

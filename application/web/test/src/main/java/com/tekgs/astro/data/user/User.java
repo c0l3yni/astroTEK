@@ -1,4 +1,4 @@
-package com.tekgs.astro.data.user.product;
+package com.tekgs.astro.data.user;
 @SuppressWarnings("unused") //  Gson is used to populate the fields
 public class User implements UserCalibratable {
     private String username;

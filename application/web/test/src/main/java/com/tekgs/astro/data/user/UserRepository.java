@@ -1,4 +1,4 @@
-package com.tekgs.astro.data.user.product;
+package com.tekgs.astro.data.user;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -16,7 +16,7 @@ public class UserRepository {
     }
 
     public User query(UserDefinition definition) {
-        for(User candidate:getUsersFromJSON()){
+        for(User candidate:queryAll()){
             if(candidate.equivalent(definition)){
                 return candidate;
             }
@@ -24,7 +24,7 @@ public class UserRepository {
         return null;
     }
 
-    private List<User> getUsersFromJSON() {
+    public List<User> queryAll() {
         List<User> userList = new ArrayList<>();
         Path path = Paths.get("../source/src/data/users.json");
         try (BufferedReader reader = Files.newBufferedReader(path)) {

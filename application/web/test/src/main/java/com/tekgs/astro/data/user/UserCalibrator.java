@@ -1,4 +1,4 @@
-package com.tekgs.astro.data.user.product;
+package com.tekgs.astro.data.user;
 
 import com.softwareonpurpose.calibrator4test.Calibrator;
 
