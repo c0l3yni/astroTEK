@@ -5,6 +5,8 @@ import com.softwareonpurpose.uinavigator.UiLocatorType;
 import com.softwareonpurpose.uinavigator.UiView;
 import com.tekgs.astro.login.loginregion.LoginRegion;
 import com.tekgs.astro.login.loginregion.LoginRegionCalibratable;
+import com.tekgs.astro.memberlanding.MemberLandingView;
+import org.apache.commons.logging.Log;
 import org.softwareonpurpose.softwaregauntlet.Environment;
 
 public class LoginView extends UiView implements LoginViewCalibratable {
@@ -38,7 +40,7 @@ public class LoginView extends UiView implements LoginViewCalibratable {
     }
 
     @Override
-    public LoginRegionCalibratable inLoginRegion() {
+    public LoginRegion inLoginRegion() {
         return LoginRegion.getInstance(this.getElement());
     }
 }

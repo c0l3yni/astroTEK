@@ -1,5 +1,6 @@
 package com.tekgs.astro.view.memberlanding;
 
+import com.tekgs.astro.login.LoginView;
 import com.tekgs.astro.memberlanding.MemberLandingView;
 import com.tekgs.astro.memberlanding.MemberLandingViewCalibrator;
 import com.tekgs.astro.memberlanding.MemberLandingViewExpected;
@@ -10,9 +11,16 @@ import org.testng.annotations.Test;
 public class MemberLandingViewTests extends GauntletTest {
 
     @Test (groups = {TestSuite.SMOKE, TestSuite.DEBUG})
-    public void Smoke() {
+    public void smoke() {
         MemberLandingViewExpected expected = MemberLandingViewExpected.getInstance();
         MemberLandingView actual = MemberLandingView.directNav();
+        then(MemberLandingViewCalibrator.getInstance(expected, actual));
+    }
+
+    @Test (groups = {TestSuite.DEBUG}, dependsOnGroups = "smoke")
+    public void directNav() {
+        MemberLandingViewExpected expected = MemberLandingViewExpected.getInstance();
+        MemberLandingView actual = LoginView.directNav().inLoginRegion().clickButton();
         then(MemberLandingViewCalibrator.getInstance(expected, actual));
     }
 }

@@ -1,7 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function LoginRegion() {
-	return (
+	const navigate = useNavigate();
+
+	function navToMemberLanding() {
+		navigate("/member-landing");
+	}
+
+	return (		
 		<form id="login-region">
 			<div id="row">
 				<span id="username">Username: </span>
@@ -11,7 +18,7 @@ function LoginRegion() {
 				<span id="password">Password: </span>
 				<input placeholder="password" type="password"></input>
 			</div>
-			<button id="submit-button" type="button">Login</button>
+			<button id="submit-button" type="button" onClick={navToMemberLanding}>Login</button>
 		</form>
 	);
 }

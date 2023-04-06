@@ -17,6 +17,7 @@ function App() {
 				<Route path="/login" element={<LoginView />} />
 				<Route path="/demographic" element={<DemographicsView />} />
 				<Route path="/chart" element={<ChartView />} />
+				<Route path="/member-landing" element={<MemberLandingView />} />
 				<Route path="/horoscope" element={<HoroscopeView />} />
 				<Route path="/compatability" element={<CompatabilityView />} />
 				<Route path="/member-landing" element={<MemberLandingView />} />
