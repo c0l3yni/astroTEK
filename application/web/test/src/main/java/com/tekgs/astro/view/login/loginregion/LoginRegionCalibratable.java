@@ -6,9 +6,7 @@ public interface LoginRegionCalibratable {
 
     String getSubmitButton();
 
-//    boolean isUsernameFieldDisplayed();
-
     String getUsernameField();
 
-//    String getSuccessfulLoginMessage();
+    String getBadLoginMessage();
 }

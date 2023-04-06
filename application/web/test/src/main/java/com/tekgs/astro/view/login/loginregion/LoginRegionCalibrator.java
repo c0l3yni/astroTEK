@@ -18,10 +18,9 @@ public class LoginRegionCalibrator extends Calibrator {
 
     @Override
     protected void executeVerifications() {
-//        verify("username field", expected.isUsernameFieldDisplayed(), actual.isUsernameFieldDisplayed());
-        verify("is username field displayed", expected.getUsernameField(), actual.getUsernameField());
+        verify("username field", expected.getUsernameField(), actual.getUsernameField());
         verify("password field", expected.getPasswordField(), actual.getPasswordField());
         verify("submit button", expected.getSubmitButton(), actual.getSubmitButton());
-//        verify("successful login", expected.getSuccessfulLoginMessage(), actual.getSuccessfulLoginMessage());
+        verify("bad login", expected.getBadLoginMessage(), actual.getBadLoginMessage());
     }
 }

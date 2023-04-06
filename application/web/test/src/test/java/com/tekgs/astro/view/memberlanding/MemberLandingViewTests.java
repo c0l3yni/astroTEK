@@ -1,4 +1,6 @@
 package com.tekgs.astro.view.memberlanding;
+
+import com.tekgs.astro.data.user.UserDefinition;
 import com.tekgs.astro.view.login.LoginView;
 import org.softwareonpurpose.softwaregauntlet.GauntletTest;
 import org.testng.annotations.Test;
@@ -15,8 +17,15 @@ public class MemberLandingViewTests extends GauntletTest {
 
     @Test (groups = {TestSuite.ACCEPTANCE}, dependsOnGroups = "smoke")
     public void directNav() {
+        //need to make get is valid in user and definition it returns a boolean but somehow works with this code
+        UserDefinition userDefinition = UserDefinition.getInstance().getIsValid();
+
+        MemberLandingView actual = LoginView.directNav(userDefinition).inLoginRegion().clickButton();
+
         MemberLandingViewExpected expected = MemberLandingViewExpected.getInstance();
-        MemberLandingView actual = LoginView.directNav().inLoginRegion().clickButton();
+
+
+
         then(MemberLandingViewCalibrator.getInstance(expected, actual));
     }
 }

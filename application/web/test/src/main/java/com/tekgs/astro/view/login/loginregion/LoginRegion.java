@@ -20,6 +20,9 @@ public class LoginRegion extends UiRegion implements LoginRegionCalibratable {
     }
 
     public MemberLandingView clickButton() {
+        // needs to get username and password
+        //needs to get is valid
+        // then do clickity click
         getSubmitButtonElement().click();
         return UiView.expect(MemberLandingView.class);
     }
@@ -33,23 +36,19 @@ public class LoginRegion extends UiRegion implements LoginRegionCalibratable {
     private UiElement getSubmitButtonElement() {
         return UiElement.getInstance("form submit button", UiLocatorType.ID, "submit-button", this.getElement());
     }
-    private UiElement getSuccessfulLoginMessageElement() {
-        return UiElement.getInstance("Success message", UiLocatorType.ID, "success", this.getElement());
+    private UiElement getBadLoginMessageElement() {
+        return UiElement.getInstance("Incorrect login message", UiLocatorType.ID, "bad-credentials", this.getElement());
     }
-//    @Override
-//    public boolean isUsernameFieldDisplayed() {
-//        String isDisabled = getUsernameFieldElement().getAttribute("disabled");
-//        return isDisabled == null;
-//    }
+
     @Override
     public String getUsernameField() {
         return getUsernameFieldElement().getText();
     }
 
-//    @Override
-//    public String getSuccessfulLoginMessage() {
-//        return getSuccessfulLoginMessageElement().getText();
-//    }
+    @Override
+    public String getBadLoginMessage() {
+        return getBadLoginMessageElement().getText();
+    }
 
     @Override
     public String getPasswordField() {

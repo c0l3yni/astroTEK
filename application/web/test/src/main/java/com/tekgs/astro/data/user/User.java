@@ -25,4 +25,9 @@ public class User implements UserCalibratable {
     public String getPassword() {
         return password;
     }
+
+    @Override
+    public boolean withValidCredentials() {
+        return true;
+    }
 }

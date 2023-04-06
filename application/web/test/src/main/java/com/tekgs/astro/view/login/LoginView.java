@@ -4,6 +4,7 @@ import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;
 import com.softwareonpurpose.uinavigator.UiView;
 import com.tekgs.astro.data.user.User;
+import com.tekgs.astro.data.user.UserDefinition;
 import com.tekgs.astro.view.login.loginregion.LoginRegion;
 import org.softwareonpurpose.softwaregauntlet.Environment;
 
@@ -21,7 +22,7 @@ public class LoginView extends UiView implements LoginViewCalibratable {
         new LoginView().load();
         return UiView.expect(LoginView.class);
     }
-    public static LoginView directNav(User loginData) {
+    public static LoginView directNav(UserDefinition loginData) {
         new LoginView().load(String.format("?username=%s&?password=%s", loginData.getUsername(), loginData.getPassword()));
         return UiView.expect(LoginView.class);
     }

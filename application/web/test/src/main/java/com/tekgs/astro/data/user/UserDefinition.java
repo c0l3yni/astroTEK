@@ -18,6 +18,11 @@ public class UserDefinition implements UserCalibratable {
         return password;
     }
 
+    @Override
+    public boolean withValidCredentials() {
+        return true;
+    }
+
     public UserDefinition withUsername(String username) {
         this.username = username;
         return this;
