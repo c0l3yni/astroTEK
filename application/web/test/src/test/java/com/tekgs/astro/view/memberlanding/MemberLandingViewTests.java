@@ -1,9 +1,6 @@
 package com.tekgs.astro.view.memberlanding;
 
-import com.tekgs.astro.login.LoginView;
-import com.tekgs.astro.memberlanding.MemberLandingView;
-import com.tekgs.astro.memberlanding.MemberLandingViewCalibrator;
-import com.tekgs.astro.memberlanding.MemberLandingViewExpected;
+import com.tekgs.astro.view.login.LoginView;
 import org.softwareonpurpose.softwaregauntlet.GauntletTest;
 import org.testng.annotations.Test;
 

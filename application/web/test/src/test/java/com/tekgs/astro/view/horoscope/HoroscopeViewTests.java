@@ -1,8 +1,5 @@
 package com.tekgs.astro.view.horoscope;
 
-import com.tekgs.astro.horoscope.HoroscopeView;
-import com.tekgs.astro.horoscope.HoroscopeViewCalibrator;
-import com.tekgs.astro.horoscope.HoroscopeViewExpected;
 import org.softwareonpurpose.softwaregauntlet.GauntletTest;
 import org.testng.annotations.Test;
 

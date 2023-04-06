@@ -1,8 +1,5 @@
 package com.tekgs.astro.view.login;
 
-import com.tekgs.astro.login.LoginView;
-import com.tekgs.astro.login.LoginViewCalibrator;
-import com.tekgs.astro.login.LoginViewExpected;
 import org.softwareonpurpose.softwaregauntlet.GauntletTest;
 import org.testng.annotations.Test;
 
