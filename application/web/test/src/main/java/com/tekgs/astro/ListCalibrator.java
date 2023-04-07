@@ -10,10 +10,10 @@ public abstract class ListCalibrator<I, C> extends Calibrator {
     private final Class<I> childCalibratable;
     private final Class<C> childCalibrator;
     
-    private ListCalibrator(String description, Object expected, Object actual, Class<I> childCalibratable, Class<C> childCalibrator) {
+    public ListCalibrator(String description, Object expected, Object actual, Class<I> childCalibratable, Class<C> childCalibrator) {
         super(description, expected, actual);
-        this.childCalibrator = childCalibrator;
         this.childCalibratable = childCalibratable;
+        this.childCalibrator = childCalibrator;
     }
     
     private Method setGetInstance() {
