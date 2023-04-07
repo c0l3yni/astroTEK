@@ -1,4 +1,4 @@
-package com.tekgs.astro.view.sign;
+package com.tekgs.astro.view.signDetails;
 
 import com.softwareonpurpose.calibrator4test.Calibrator;
 

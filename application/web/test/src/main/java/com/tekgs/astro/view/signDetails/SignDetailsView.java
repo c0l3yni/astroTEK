@@ -1,4 +1,4 @@
-package com.tekgs.astro.view.sign;
+package com.tekgs.astro.view.signDetails;
 
 import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;

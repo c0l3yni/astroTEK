@@ -1,7 +1,11 @@
 package com.tekgs.astro.data.sign;
 
 public interface SignCalibratable {
-    String getSignName();
+    String getName();
     
-    String getSignInfo();
+    String getDescription();
+    
+    String getId();
+    
+    boolean equivalent(SignCalibratable comparator);
 }
