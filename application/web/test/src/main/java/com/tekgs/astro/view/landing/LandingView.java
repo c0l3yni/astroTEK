@@ -8,9 +8,9 @@ import com.tekgs.astro.view.login.LoginView;
 import org.softwareonpurpose.softwaregauntlet.Environment;
 
 public class LandingView extends UiView implements LandingViewCalibratable {
-    private static final String DESCRIPTION = "'Landing' View";
-    private static final String RELATIVE_URI = "landing";
     private static final String DOMAIN_URI = Environment.getInstance().getDomainURL();
+    private static final String RELATIVE_URI = "landing";
+    private static final String DESCRIPTION = "'Landing' view";
     private static final String LOCATOR_TYPE = UiLocatorType.ID;
     private static final String LOCATOR_VALUE = "landing-view";
 

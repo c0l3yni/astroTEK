@@ -108,6 +108,7 @@ public abstract class GauntletTest {
         public static final String CHART = "chart";
         public static final String HOROSCOPE = "horoscope";
         public static final String COMPATIBILITY_CALC = "compatability-calc";
+        public static final String SIGN = "sign";
     }
     
     public enum Application {
