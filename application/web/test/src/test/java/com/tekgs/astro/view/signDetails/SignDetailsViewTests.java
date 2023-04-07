@@ -12,7 +12,7 @@ public class SignDetailsViewTests extends GauntletTest {
     @Test(groups = {TestSuite.DEBUG})
     public void smoke() {
         SignDetailsViewExpected expected = SignDetailsViewExpected.getInstance();
-        SignDetailsView actual = SignDetailsView.directNav();
+        SignDetailsView actual = SignDetailsView.directNav("1");
         then(SignDetailsViewCalibrator.getInstance(expected, actual));
     }
     

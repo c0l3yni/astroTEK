@@ -17,8 +17,8 @@ public class SignDetailsView extends UiView implements SignDetailsViewCalibratab
                 UiElement.getInstance(DESCRIPTION, LOCATOR_TYPE, LOCATOR_VALUE));
     }
     
-    public static SignDetailsView directNav() {
-        new SignDetailsView().load();
+    public static SignDetailsView directNav(String id) {
+        new SignDetailsView().load(String.format("?sign_id=%s", id));
         return UiView.expect(SignDetailsView.class);
     }
     

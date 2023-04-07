@@ -21,6 +21,7 @@ public class SignRegion extends UiRegion implements SignRegionCalibratable {
     public SignDetailsView toSignDetailsView() {
         String id = this.signElement.getAttribute("data-sign");
         this.signElement.click();
+//        new SignDetailsView().load(); <- can't do this here bc of protected access
         return UiView.expect(SignDetailsView.class);
     }
     
