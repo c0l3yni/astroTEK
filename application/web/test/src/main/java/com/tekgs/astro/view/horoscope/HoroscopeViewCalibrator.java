@@ -19,6 +19,6 @@ public class HoroscopeViewCalibrator extends Calibrator {
 
     @Override
     protected void executeVerifications() {
-        verify("Horoscope View title", expected.getHoroscopeViewTitle(), actual.getHoroscopeViewTitle());
+        verify("'Horoscope' view title", expected.getHoroscopeViewTitle(), actual.getHoroscopeViewTitle());
     }
 }

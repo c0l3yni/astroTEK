@@ -14,7 +14,8 @@ public class SignView extends UiView implements SignViewCalibratable {
     private static final String LOCATOR_VALUE = "sign-view";
     
     public SignView() {
-        super(String.format("%s/%s", DOMAIN_URI, RELATIVE_URI), UiElement.getInstance(DESCRIPTION, LOCATOR_TYPE, LOCATOR_VALUE));
+        super(String.format("%s/%s", DOMAIN_URI, RELATIVE_URI),
+                UiElement.getInstance(DESCRIPTION, LOCATOR_TYPE, LOCATOR_VALUE));
     }
     
     public static SignView directNav() {
@@ -22,8 +23,17 @@ public class SignView extends UiView implements SignViewCalibratable {
         return UiView.expect(SignView.class);
     }
     
+    private UiElement getSignViewTitleElement() {
+        return UiElement.getInstance("'Sign' view", UiLocatorType.ID, "sign", this.getElement());
+    }
+    
+    @Override
+    public String getSignViewTitle() {
+        return this.getSignViewTitleElement().getText();
+    }
+    
     @Override
     protected boolean confirmElementStates() {
-        return false;
+        return this.getElement().waitUntilVisible();
     }
 }
