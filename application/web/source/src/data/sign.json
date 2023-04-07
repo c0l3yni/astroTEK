@@ -1,0 +1,62 @@
+[
+	{
+		"id": "1",
+		"name": "Aries",
+		"description": "is Thomas (or is it?)"
+	},
+	{
+		"id": "2",
+		"name": "Taurus",
+		"description": "One of these"
+	},
+	{
+		"id": "3",
+		"name": "Gemini",
+		"description": "is Cole"
+	},
+	{
+		"id": "4",
+		"name": "Cancer",
+		"description": "cannot"
+	},
+	{
+		"id": "5",
+		"name": "Leo",
+		"description": "remember"
+	},
+	{
+		"id": "6",
+		"name": "Virgo",
+		"description": "which one"
+	},
+	{
+		"id": "7",
+		"name": "Libra",
+		"description": "it is"
+	},
+	{
+		"id": "8",
+		"name": "Scorpius",
+		"description": "is secretly Thomas"
+	},
+	{
+		"id": "9",
+		"name": "Sagittarius",
+		"description": "is hard to spell"
+	},
+	{
+		"id": "10",
+		"name": "Capricornus",
+		"description": "is corn"
+	},
+	{
+		"id": "11",
+		"name": "Aquarius",
+		"description": "is water"
+	},
+	{
+		"id": "12",
+		"name": "Pisces",
+		"description": "is fish"
+	}
+]
