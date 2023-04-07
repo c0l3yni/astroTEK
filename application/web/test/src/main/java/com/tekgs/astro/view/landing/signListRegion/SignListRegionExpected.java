@@ -1,6 +1,7 @@
 package com.tekgs.astro.view.landing.signListRegion;
 
 import com.tekgs.astro.data.sign.Sign;
+import com.tekgs.astro.data.sign.SignProvider;
 import com.tekgs.astro.view.landing.signListRegion.signRegion.SignRegionCalibratable;
 import com.tekgs.astro.view.landing.signListRegion.signRegion.SignRegionExpected;
 
@@ -8,16 +9,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SignListRegionExpected implements SignListRegionCalibratable {
+    private final List<Sign> signList;
     
-    
-    private final List<Sign> signList = new ArrayList<>();
-    
-    public SignListRegionExpected(List<Sign> signList) {
-        this.signList.addAll(signList);
+    public SignListRegionExpected() {
+        this.signList = SignProvider.getInstance().getAll();
     }
     
-    public static SignListRegionExpected getInstance(List<Sign> signList) {
-        return new SignListRegionExpected(signList);
+    public static SignListRegionExpected getInstance() {
+        return new SignListRegionExpected();
     }
     
     @Override

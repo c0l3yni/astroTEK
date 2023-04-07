@@ -25,4 +25,12 @@ public class SignRegion extends UiRegion implements SignRegionCalibratable {
     public String getSignName() {
         return this.getElement().getText();
     }
+    
+    @Override
+    public boolean equivalent(SignRegionCalibratable comparator) {
+        if (comparator == null) {
+            return false;
+        }
+        return comparator.getSignName() == null || this.getSignName().equals(comparator.getSignName());
+    }
 }

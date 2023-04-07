@@ -17,4 +17,9 @@ public class SignRegionExpected implements SignRegionCalibratable{
     public String getSignName() {
         return this.sign.getName();
     }
+    
+    @Override
+    public boolean equivalent(SignRegionCalibratable comparator) {
+        return false;
+    }
 }

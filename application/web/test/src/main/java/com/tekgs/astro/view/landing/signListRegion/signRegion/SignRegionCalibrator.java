@@ -14,6 +14,10 @@ public class SignRegionCalibrator extends Calibrator {
         this.actual = actual;
     }
     
+    public static SignRegionCalibrator getInstance(SignRegionExpected expected, SignRegion actual) {
+        return new SignRegionCalibrator(expected, actual);
+    }
+    
     @Override
     protected void executeVerifications() {
         verify("'Sign' name", expected.getSignName(), actual.getSignName());

@@ -1,13 +1,8 @@
 package com.tekgs.astro.view.landing;
 
-import com.tekgs.astro.data.sign.Sign;
 import com.tekgs.astro.view.landing.signListRegion.SignListRegionExpected;
 
-import java.util.List;
-
 public class LandingViewExpected implements LandingViewCalibratable{
-    
-    private List<Sign> signList;
     
     private LandingViewExpected() {
     }
@@ -23,6 +18,6 @@ public class LandingViewExpected implements LandingViewCalibratable{
     
     @Override
     public SignListRegionExpected getSignListRegion() {
-        return SignListRegionExpected.getInstance(signList);
+        return SignListRegionExpected.getInstance();
     }
 }
