@@ -1,10 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function SignRegion({ sign }) {
+	const navigate = useNavigate();
+
+	function navToSign() {
+		navigate(`/sign?sign_id=${sign.id}`);
+	}
+
 	return (
-		<div className="sign-region" data-sign={sign.id}>
+		<p className="sign-region" data-sign={sign.id} onClick={navToSign}>
 			{sign.name}
-		</div>
+		</p>
 	);
 }
 

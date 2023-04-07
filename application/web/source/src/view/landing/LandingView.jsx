@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import TitleRegion from "../../region/TitleRegion";
 import SignListRegion from "./SignListRegion/SignListRegion";
+import "./landingView.css";
 
 function LandingView() {
 	const navigate = useNavigate();
