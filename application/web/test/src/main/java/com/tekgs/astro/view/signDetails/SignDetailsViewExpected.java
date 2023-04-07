@@ -2,20 +2,20 @@ package com.tekgs.astro.view.signDetails;
 
 import com.tekgs.astro.data.sign.Sign;
 
-public class SignViewExpected implements SignViewCalibratable {
+public class SignDetailsViewExpected implements SignDetailsViewCalibratable {
     
     private final Sign sign;
     
-    private SignViewExpected(Sign sign) {
+    private SignDetailsViewExpected(Sign sign) {
         this.sign = sign;
     }
     
-    public static SignViewExpected getInstance() {
-        return new SignViewExpected(null);
+    public static SignDetailsViewExpected getInstance() {
+        return new SignDetailsViewExpected(null);
     }
     
-    public static SignViewExpected getInstance(Sign sign) {
-        return new SignViewExpected(sign);
+    public static SignDetailsViewExpected getInstance(Sign sign) {
+        return new SignDetailsViewExpected(sign);
     }
     
     @Override

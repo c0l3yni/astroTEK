@@ -1,5 +1,5 @@
 package com.tekgs.astro.view.signDetails;
 
-public interface SignViewCalibratable {
+public interface SignDetailsViewCalibratable {
     String getSignViewTitle();
 }
