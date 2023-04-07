@@ -1,6 +1,7 @@
 import React from "react";
-import TitleRegion from "../../region/TitleRegion";
 import { useNavigate } from "react-router-dom";
+import TitleRegion from "../../region/TitleRegion";
+import SignListRegion from "./SignListRegion/SignListRegion";
 
 function LandingView() {
 	const navigate = useNavigate();
@@ -22,6 +23,7 @@ function LandingView() {
 			<button id="nav-to-demographics" type="button" onClick={navToDemographics}>
 				Guest/Demographics/Whatever
 			</button>
+			<SignListRegion />
 		</div>
 	);
 }
