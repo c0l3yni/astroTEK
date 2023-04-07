@@ -6,7 +6,6 @@ import com.softwareonpurpose.uinavigator.UiView;
 import org.softwareonpurpose.softwaregauntlet.Environment;
 
 public class SignView extends UiView implements SignViewCalibratable {
-    
     private static final String DOMAIN_URI = Environment.getInstance().getDomainURL();
     private static final String RELATIVE_URI = "sign";
     private static final String DESCRIPTION = "'Sign' view";
@@ -19,7 +18,7 @@ public class SignView extends UiView implements SignViewCalibratable {
     }
     
     public static SignView directNav() {
-        new SignView();
+        new SignView().load();
         return UiView.expect(SignView.class);
     }
     

@@ -6,6 +6,7 @@ import DemographicsView from "./view/demographic/DemographicsView";
 import ChartView from "./view/chart/ChartView";
 import HoroscopeView from "./view/horoscope/HoroscopeView";
 import CompatabilityView from "./view/compatability/CompatabilityView";
+import SignView from "./view/sign/SignView";
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 				<Route path="/chart" element={<ChartView />} />
 				<Route path="/horoscope" element={<HoroscopeView />} />
 				<Route path="/compatability" element={<CompatabilityView />} />
+				<Route path="/sign" element={<SignView />} />
 			</Routes>
 		</div>
 	);
