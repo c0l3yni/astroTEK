@@ -6,19 +6,19 @@ import DemographicsView from "./view/demographic/DemographicsView";
 import ChartView from "./view/chart/ChartView";
 import HoroscopeView from "./view/horoscope/HoroscopeView";
 import CompatibilityView from "./view/compatability/CompatibilityView";
-import SignView from "./view/sign/SignView";
+import SignDetailsView from "./view/signDetails/SignDetailsView";
 
 function App() {
 	return (
 		<div className="App">
 			<Routes>
-				<Route path="/landing" element={<LandingView />} />
+				<Route path="/" element={<LandingView />} />
 				<Route path="/login" element={<LoginView />} />
 				<Route path="/demographics" element={<DemographicsView />} />
 				<Route path="/chart" element={<ChartView />} />
 				<Route path="/horoscope" element={<HoroscopeView />} />
 				<Route path="/compatibility" element={<CompatibilityView />} />
-				<Route path="/sign" element={<SignView />} />
+				<Route path="/sign" element={<SignDetailsView />} />
 			</Routes>
 		</div>
 	);
