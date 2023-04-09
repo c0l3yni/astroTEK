@@ -7,9 +7,9 @@ import org.softwareonpurpose.softwaregauntlet.GauntletTest;
 import org.testng.annotations.Test;
 
 @Test(groups = {GauntletTest.Application.ASTRO_TEK, GauntletTest.View.COMPATIBILITY_CALC})
-public class CompatibilityViewTests extends GauntletTest{
-
-    @Test(groups = {TestSuite.SMOKE})
+public class CompatibilityViewTests extends GauntletTest {
+    
+    @Test(groups = {TestSuite.SMOKE, TestSuite.DEBUG})
     public void smoke() {
         CompatibilityViewExpected expected = CompatibilityViewExpected.getInstance();
         CompatibilityView actual = CompatibilityView.directNav();

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 @Test(groups = {GauntletTest.Application.ASTRO_TEK, GauntletTest.View.LOGIN})
 public class LoginViewTests extends GauntletTest {
-
+    
     @Test(groups = {TestSuite.SMOKE})
     public void smoke() {
         LoginViewExpected expected = LoginViewExpected.getInstance();
@@ -14,7 +14,7 @@ public class LoginViewTests extends GauntletTest {
         then(LoginViewCalibrator.getInstance(expected, actual));
     }
     
-    @Test(groups = {TestSuite.ACCEPTANCE, TestSuite.DEBUG}, dependsOnMethods = "smoke")
+    @Test(groups = {TestSuite.ACCEPTANCE}, dependsOnMethods = "smoke")
     public void fromLandingView() {
         LoginViewExpected expected = LoginViewExpected.getInstance();
         LoginView actual = LandingView.directNav().toLoginView();

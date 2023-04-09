@@ -9,14 +9,14 @@ import org.testng.annotations.Test;
 @Test(groups = {GauntletTest.Application.ASTRO_TEK, GauntletTest.View.SIGN})
 public class SignDetailsViewTests extends GauntletTest {
     
-    @Test(groups = {TestSuite.DEBUG})
+    @Test(groups = {TestSuite.SMOKE})
     public void smoke() {
         SignDetailsViewExpected expected = SignDetailsViewExpected.getInstance();
         SignDetailsView actual = SignDetailsView.directNav("1");
         then(SignDetailsViewCalibrator.getInstance(expected, actual));
     }
     
-    @Test(groups = {TestSuite.ACCEPTANCE, TestSuite.DEBUG}, dependsOnMethods = "smoke")
+    @Test(groups = {TestSuite.ACCEPTANCE}, dependsOnMethods = "smoke")
     public void fromLandingView() {
         Sign sign = SignProvider.getInstance().get();
         SignDetailsViewExpected expected = SignDetailsViewExpected.getInstance(sign);

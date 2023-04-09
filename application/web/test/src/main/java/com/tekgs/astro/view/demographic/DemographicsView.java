@@ -11,27 +11,27 @@ public class DemographicsView extends UiView implements DemographicsViewCalibrat
     private static final String DOMAIN_URI = Environment.getInstance().getDomainURL();
     private static final String LOCATOR_TYPE = UiLocatorType.ID;
     private static final String LOCATOR_VALUE = "demographics-view";
-
+    
     public DemographicsView() {
         super(String.format("%s/%s", DOMAIN_URI, RELATIVE_URI),
                 UiElement.getInstance(DESCRIPTION, LOCATOR_TYPE, LOCATOR_VALUE));
     }
-
+    
     public static DemographicsView directNav() {
         new DemographicsView().load();
         return UiView.expect(DemographicsView.class);
     }
-
-    @Override
-    public String getInputFormTitle() {
-        return getInputFormTitleElement().getText();
-    }
-
+    
     private UiElement getInputFormTitleElement() {
         return UiElement.getInstance("'Demographic' Form Input Title", UiLocatorType.ID,
                 "demographics", this.getElement());
     }
-
+    
+    @Override
+    public String getInputFormTitle() {
+        return getInputFormTitleElement().getText();
+    }
+    
     @Override
     protected boolean confirmElementStates() {
         return this.getElement().waitUntilVisible();

@@ -32,5 +32,4 @@ public class Sign implements SignCalibratable {
         isEquivalent &= comparator.getDescription() == null || this.getDescription().equals(comparator.getDescription());
         return isEquivalent;
     }
-    
 }

@@ -5,7 +5,7 @@ import LoginView from "./view/login/LoginView";
 import DemographicsView from "./view/demographic/DemographicsView";
 import ChartView from "./view/chart/ChartView";
 import HoroscopeView from "./view/horoscope/HoroscopeView";
-import CompatabilityView from "./view/compatability/CompatabilityView";
+import CompatibilityView from "./view/compatability/CompatibilityView";
 import SignView from "./view/sign/SignView";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
 				<Route path="/demographics" element={<DemographicsView />} />
 				<Route path="/chart" element={<ChartView />} />
 				<Route path="/horoscope" element={<HoroscopeView />} />
-				<Route path="/compatability" element={<CompatabilityView />} />
+				<Route path="/compatibility" element={<CompatibilityView />} />
 				<Route path="/sign" element={<SignView />} />
 			</Routes>
 		</div>

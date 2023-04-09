@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SignListRegion extends UiRegion implements SignListRegionCalibratable {
-    
     private static final String DESCRIPTION = "Sign List' region";
     private static final String LOCATOR_TYPE = UiLocatorType.ID;
     private static final String LOCATOR_VALUE = "sign-list-region";

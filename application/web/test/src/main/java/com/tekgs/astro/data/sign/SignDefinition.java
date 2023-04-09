@@ -1,7 +1,6 @@
 package com.tekgs.astro.data.sign;
 
 public class SignDefinition implements SignCalibratable {
-    
     private String id;
     private String name;
     private String description;

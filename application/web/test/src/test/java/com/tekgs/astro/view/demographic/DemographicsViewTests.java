@@ -5,7 +5,8 @@ import org.softwareonpurpose.softwaregauntlet.GauntletTest;
 import org.testng.annotations.Test;
 
 @Test(groups = {GauntletTest.Application.ASTRO_TEK, GauntletTest.View.DEMOGRAPHIC})
-public class DemographicsViewTests extends GauntletTest{
+public class DemographicsViewTests extends GauntletTest {
+    
     @Test(groups = {TestSuite.SMOKE})
     public void smoke() {
         DemographicsViewExpected expected = DemographicsViewExpected.getInstance();
@@ -13,7 +14,7 @@ public class DemographicsViewTests extends GauntletTest{
         then(DemographicsViewCalibrator.getInstance(expected, actual));
     }
     
-    @Test(groups = {TestSuite.ACCEPTANCE, TestSuite.DEBUG}, dependsOnMethods = "smoke")
+    @Test(groups = {TestSuite.ACCEPTANCE}, dependsOnMethods = "smoke")
     public void fromLandingView() {
         DemographicsViewExpected expected = DemographicsViewExpected.getInstance();
         DemographicsView actual = LandingView.directNav().toDemographicsView();
