@@ -22,4 +22,14 @@ public class SignDetailsViewExpected implements SignDetailsViewCalibratable {
     public String getSignViewTitle() {
         return "Sign";
     }
+    
+    @Override
+    public String getSignName() {
+        return this.sign.getName();
+    }
+    
+    @Override
+    public String getSignDescription() {
+        return this.sign.getDescription();
+    }
 }

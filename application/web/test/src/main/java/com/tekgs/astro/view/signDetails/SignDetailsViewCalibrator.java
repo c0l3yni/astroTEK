@@ -20,6 +20,8 @@ public class SignDetailsViewCalibrator extends Calibrator {
     
     @Override
     protected void executeVerifications() {
-        verify("'Sign' view title", expected.getSignViewTitle(), actual.getSignViewTitle());
+        verify("'Sign Details' view title", expected.getSignViewTitle(), actual.getSignViewTitle());
+        verify("'Sign Name' text", expected.getSignName(), actual.getSignName());
+        verify("'Sign Name' text", expected.getSignDescription(), actual.getSignDescription());
     }
 }

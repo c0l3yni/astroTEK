@@ -22,13 +22,31 @@ public class SignDetailsView extends UiView implements SignDetailsViewCalibratab
         return UiView.expect(SignDetailsView.class);
     }
     
-    private UiElement getSignViewTitleElement() {
+    private UiElement getTitleElement() {
         return UiElement.getInstance("'Sign' view", UiLocatorType.ID, "sign", this.getElement());
+    }
+    
+    private UiElement getNameElement() {
+        return UiElement.getInstance("'Sign Name' text", UiLocatorType.ID, "sign-name", this.getElement());
+    }
+    
+    private UiElement getDescriptionElement() {
+        return UiElement.getInstance("'Sign Description' text", UiLocatorType.ID, "sign-description", this.getElement());
     }
     
     @Override
     public String getSignViewTitle() {
-        return this.getSignViewTitleElement().getText();
+        return this.getTitleElement().getText();
+    }
+    
+    @Override
+    public String getSignName() {
+        return this.getNameElement().getText();
+    }
+    
+    @Override
+    public String getSignDescription() {
+        return this.getDescriptionElement().getText();
     }
     
     @Override
