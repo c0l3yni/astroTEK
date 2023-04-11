@@ -2,25 +2,11 @@ package com.tekgs.astro.data.user;
 
 @SuppressWarnings("unused")
 public class UserDefinition implements UserCalibratable {
-    private String username;
-    private String password;
+    public String username;
+    public String password;
 
     public static UserDefinition getInstance() {
         return new UserDefinition();
-    }
-    @Override
-    public String getUsername() {
-        return username;
-    }
-
-    @Override
-    public String getPassword() {
-        return password;
-    }
-
-    @Override
-    public boolean withValidCredentials() {
-        return true;
     }
 
     public UserDefinition withUsername(String username) {
@@ -31,5 +17,14 @@ public class UserDefinition implements UserCalibratable {
     public UserDefinition withPassword(String password) {
         this.password = password;
         return this;
+    }
+    @Override
+    public String getUsername() {
+        return username;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
     }
 }

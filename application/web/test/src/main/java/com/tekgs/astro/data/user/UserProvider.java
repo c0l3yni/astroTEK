@@ -1,7 +1,6 @@
 package com.tekgs.astro.data.user;
 
 import java.util.List;
-import java.util.Objects;
 
 public class UserProvider {
     private final UserRepository userRepository = UserRepository.getInstance();

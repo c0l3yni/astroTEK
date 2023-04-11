@@ -1,52 +1,44 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import users from "../../data/users.json"
-import { useState } from "react";
 
 function LoginRegion() {
-	const [badMsg, setBadMsg] = useState("");
-
+	const testUsername = new URLSearchParams(window.location.search).get("username");
+	const testPassword = new URLSearchParams(window.location.search).get("password");
+	let dataUsername = users.map((user) => user.username);
+	let dataPassword = users.map((user) => user.password);
 	const navigate = useNavigate();
-	const urlParams = new URLSearchParams(location.search);	
-	let user = users.map((user) => {
-		return user.username && user.password;
-	})
 
-for (const [key, value] of urlParams) {
-    console.log(`${key}:${value}`);
-}
-
-function navToMemberLanding() {
+	function navToMember() {
 		navigate("/member-landing");
 	}
 
-function doCredentialsMatch(user) {
-	if(urlParams.key ==="username" && user.username === urlParams.value) {
-			if(urlParams.key === "password" && user.password === urlParams.value) {
-					return true;
-				}
-			}
+	function badMsg() {
+		if(document.getElementById("username").innerHTML === null || !document.getElementById("password").innerText === null){
+			return "" 
+		} else {
+			"Incorrect credentials provided";
 		}
-
-
-function whatToDo(user) {
-	if(doCredentialsMatch(user) === true) {
-		return navToMemberLanding();
-	} else {
-		setBadMsg("Incorrect credentials provided");
 	}
-}
-
+	
+	function doCredsMatch() {	
+		if(testUsername == dataUsername && testPassword == dataPassword) {
+			return navToMember();
+		} else {
+			return badMsg();
+		}
+	}
+	
 	return (		
 		<form id="login-region">
 			<div id="row" disabled>
-				<span id="username">Username: </span><input placeholder="username" type="text"></input>
+				<span >Username: </span><input placeholder="username" id="username" type="text"></input>
 			</div>
 			<div id="row" >
-				<span id="password">Password: </span><input placeholder="password" type="password"></input>
+				<span>Password: </span><input placeholder="password" id="password" type="password"></input>
 			</div>
-			<div id="bad-credentials">{badMsg}</div>
-			<button id="submit-button" type="button" onClick={whatToDo}>Login</button>
+			<div id="bad-credentials">{badMsg()}</div>
+			<button id="submit-button" type="button" onClick={doCredsMatch}>Login</button>
 		</form>
 	);
 }

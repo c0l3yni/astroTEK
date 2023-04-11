@@ -4,6 +4,8 @@ import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;
 import com.softwareonpurpose.uinavigator.UiRegion;
 import com.softwareonpurpose.uinavigator.UiView;
+import com.tekgs.astro.data.user.UserDefinition;
+import com.tekgs.astro.view.landing.LandingView;
 import com.tekgs.astro.view.memberlanding.MemberLandingView;
 
 public class LoginRegion extends UiRegion implements LoginRegionCalibratable {
@@ -19,13 +21,7 @@ public class LoginRegion extends UiRegion implements LoginRegionCalibratable {
         return new LoginRegion(uielement);
     }
 
-    public MemberLandingView clickButton() {
-        // needs to get username and password
-        //needs to get is valid
-        // then do clickity click
-        getSubmitButtonElement().click();
-        return UiView.expect(MemberLandingView.class);
-    }
+
     private UiElement getUsernameFieldElement() {
         return UiElement.getInstance("Username field", UiLocatorType.ID, "username", this.getElement());
     }
@@ -58,5 +54,12 @@ public class LoginRegion extends UiRegion implements LoginRegionCalibratable {
     @Override
     public String getSubmitButton() {
         return getSubmitButtonElement().getText();
+    }
+
+    public MemberLandingView login(UserDefinition userDefinition) {
+        this.getUsernameFieldElement().set(userDefinition.getUsername());
+        this.getPasswordFieldElement().set(userDefinition.getPassword());
+        getSubmitButtonElement().click();
+        return UiView.expect(MemberLandingView.class);
     }
 }

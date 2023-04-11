@@ -4,6 +4,4 @@ public interface UserCalibratable {
     String getUsername();
 
     String getPassword();
-
-    boolean withValidCredentials();
 }

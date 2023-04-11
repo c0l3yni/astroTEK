@@ -1,8 +1,8 @@
 package com.tekgs.astro.data.user;
 @SuppressWarnings("unused") //  Gson is used to populate the fields
 public class User implements UserCalibratable {
-    private String username;
-    private String password;
+    private String username = "";
+    private String password = "";
     private static boolean areEquivalent(Object comparatorValue, Object thisValue) {
         return comparatorValue == null || thisValue.equals(comparatorValue);
     }
@@ -24,10 +24,5 @@ public class User implements UserCalibratable {
     @Override
     public String getPassword() {
         return password;
-    }
-
-    @Override
-    public boolean withValidCredentials() {
-        return true;
     }
 }

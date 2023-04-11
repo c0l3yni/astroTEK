@@ -10,27 +10,17 @@ import org.testng.annotations.Test;
 
 @Test(groups = {GauntletTest.Application.ASTRO_TEK, GauntletTest.View.LOGIN})
 public class LoginViewTests extends GauntletTest {
-    @Test(groups = {TestSuite.SMOKE, TestSuite.DEBUG})
+    @Test(groups = {TestSuite.SMOKE})
     public void smoke() {
         LoginViewExpected expected = LoginViewExpected.getInstance();
         LoginView actual = LoginView.directNav();
         then(LoginViewCalibrator.getInstance(expected, actual));
     }
 
-    @Test(groups = {TestSuite.DEBUG},dependsOnMethods = "smoke")
-    public void directNav() {
-        UserDefinition userDefinition = UserDefinition.getInstance().withUsername("user123").withPassword("pass123");
-        User loginData = UserProvider.getInstance().get(userDefinition);
-        LoginViewExpected expected = LoginViewExpected.getInstance(loginData);
-        LoginView actual = LoginView.directNav(userDefinition);
-        then(LoginViewCalibrator.getInstance(expected, actual));
-    }
-
-    @Test(groups = {TestSuite.DEBUG},dependsOnMethods = "smoke")
-    public void noNav() {
+    @Test(groups = {TestSuite.ACCEPTANCE},dependsOnMethods = "smoke")
+    public void failed() {
         UserDefinition userDefinition = UserDefinition.getInstance().withUsername("nonuser").withPassword("invalid");
-        User loginData = UserProvider.getInstance().get(userDefinition);
-        LoginViewExpected expected = LoginViewExpected.getInstance(loginData);
+        LoginViewExpected expected = LoginViewExpected.getFailedInstance(userDefinition);
         LoginView actual = LoginView.directNav(userDefinition);
         then(LoginViewCalibrator.getInstance(expected, actual));
     }

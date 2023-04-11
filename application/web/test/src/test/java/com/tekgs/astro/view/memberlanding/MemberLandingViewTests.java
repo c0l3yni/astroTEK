@@ -15,17 +15,11 @@ public class MemberLandingViewTests extends GauntletTest {
         then(MemberLandingViewCalibrator.getInstance(expected, actual));
     }
 
-    @Test (groups = {TestSuite.ACCEPTANCE}, dependsOnGroups = "smoke")
+    @Test (groups = {TestSuite.ACCEPTANCE, TestSuite.DEBUG}, dependsOnGroups = "smoke")
     public void directNav() {
-        //need to make get is valid in user and definition it returns a boolean but somehow works with this code
-        UserDefinition userDefinition = UserDefinition.getInstance().getIsValid();
-
-        MemberLandingView actual = LoginView.directNav(userDefinition).inLoginRegion().clickButton();
-
+        UserDefinition userDefinition = UserDefinition.getInstance().withUsername("user123").withPassword("pass123");
         MemberLandingViewExpected expected = MemberLandingViewExpected.getInstance();
-
-
-
+        MemberLandingView actual = LoginView.directNav(userDefinition).inLoginRegion().login(userDefinition);
         then(MemberLandingViewCalibrator.getInstance(expected, actual));
     }
 }
