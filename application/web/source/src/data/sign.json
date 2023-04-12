@@ -1,62 +1,158 @@
 [
-	{
-		"id": "1",
-		"name": "Aries",
-		"description": "is Thomas (or is it?)"
-	},
-	{
-		"id": "2",
-		"name": "Taurus",
-		"description": "One of these"
-	},
-	{
-		"id": "3",
-		"name": "Gemini",
-		"description": "is Cole"
-	},
-	{
-		"id": "4",
-		"name": "Cancer",
-		"description": "cannot"
-	},
-	{
-		"id": "5",
-		"name": "Leo",
-		"description": "remember"
-	},
-	{
-		"id": "6",
-		"name": "Virgo",
-		"description": "which one"
-	},
-	{
-		"id": "7",
-		"name": "Libra",
-		"description": "it is"
-	},
-	{
-		"id": "8",
-		"name": "Scorpius",
-		"description": "is secretly Thomas"
-	},
-	{
-		"id": "9",
-		"name": "Sagittarius",
-		"description": "is hard to spell"
-	},
-	{
-		"id": "10",
-		"name": "Capricornus",
-		"description": "is corn"
-	},
-	{
-		"id": "11",
-		"name": "Aquarius",
-		"description": "is water"
-	},
-	{
-		"id": "12",
-		"name": "Pisces",
-		"description": "is fish"
-	}
+  {
+    "id": "1",
+    "name": "Aries",
+    "description": "Thomas",
+    "startDate": "March 21st",
+    "endDate": "April 19th",
+    "tarotCard": "The Emperor",
+    "element": "fire",
+    "rulingPlanet": "Mars",
+    "rulingHouse": "1st house of self",
+    "color": "red",
+    "sisterSign": "Libra"
+  },
+  {
+    "id": "2",
+    "name": "Taurus",
+    "description": "my brother",
+    "startDate": "April 20th",
+    "endDate": "May 20th",
+    "tarotCard": "The Hierophant",
+    "element": "earth",
+    "rulingPlanet": "Venus",
+    "rulingHouse": "2nd house of worth",
+    "color": "green",
+    "sisterSign": "Scorpio"
+  },
+  {
+    "id": "3",
+    "name": "Gemini",
+    "description": "my duaghter",
+    "startDate": "May 21st",
+    "endDate": "June 20th",
+    "tarotCard": "The Lovers",
+    "element": "air",
+    "rulingPlanet": "Mercury",
+    "rulingHouse": "3rd house of communication",
+    "color": "yellow",
+    "sisterSign": "Saggitarius"
+  },
+  {
+    "id": "4",
+    "name": "Cancer",
+    "description": "Waleed",
+    "startDate": "June 21st",
+    "endDate": "July 22nd",
+    "tarotCard": "The Chariot",
+    "element": "water",
+    "rulingPlanet": "Moon",
+    "rulingHouse": "4th house of security",
+    "color": "silver and white",
+    "sisterSign": "Cancer"
+  },
+  {
+    "id": "5",
+    "name": "Leo",
+    "description": "Nicole",
+    "startDate": "July 23rd",
+    "endDate": "August 22nd",
+    "tarotCard": "Strength",
+    "element": "fire",
+    "rulingPlanet": "Sun",
+    "rulingHouse": "5th house of pleasure",
+    "color": "gold",
+    "sisterSign": "Aquarius"
+  },
+  {
+    "id": "6",
+    "name": "Virgo",
+    "description": "my dad",
+    "startDate": "August 23rd",
+    "endDate": "September 22nd",
+    "tarotCard": "Hermit",
+    "element": "earth",
+    "rulingPlanet": "Mercury",
+    "rulingHouse": "6th house of routine",
+    "color": "brown and green",
+    "sisterSign": "Pisces"
+  },
+  {
+    "id": "7",
+    "name": "Libra",
+    "description": "Taylor",
+    "startDate": "September 23rd",
+    "endDate": "October 22nd",
+    "tarotCard": "Justice",
+    "element": "air",
+    "rulingPlanet": "Venus",
+    "rulingHouse": "7th house of relationships",
+    "color": "pink and light blue",
+    "sisterSign": "Aries"
+  },
+  {
+    "id": "8",
+    "name": "Scorpio",
+    "description": "Ashley",
+    "startDate": "October 23rd",
+    "endDate": "November 21st",
+    "tarotCard": "Death",
+    "element": "water",
+    "rulingPlanet": "Pluto",
+    "rulingHouse": "8th house of intimacy",
+    "color": "black",
+    "sisterSign": "Taurus"
+  },
+  {
+    "id": "9",
+    "name": "Sagittarius",
+    "description": "my moon sign",
+    "startDate": "November 22nd",
+    "endDate": "December 21st",
+    "tarotCard": "Temperance",
+    "element": "fire",
+    "rulingPlanet": "Jupiter",
+    "rulingHouse": "9th house of expansion",
+    "color": "purple",
+    "sisterSign": "Gemini"
+  },
+  {
+    "id": "10",
+    "name": "Capricorn",
+    "description": "Brie",
+    "startDate": "December 22nd",
+    "endDate": "January 19th",
+    "tarotCard": "The Devil",
+    "element": "earth",
+    "rulingPlanet": "Saturn",
+    "rulingHouse": "10th house of career",
+    "color": "grey and brown",
+    "sisterSign": "Cancer"
+  },
+  {
+    "id": "11",
+    "name": "Aquarius",
+    "description": "every person I have ever disliked",
+    "startDate": "January 20th",
+    "endDate": "February 18th",
+    "tarotCard": "The Star",
+    "element": "air",
+    "rulingPlanet": "Uranus",
+    "rulingHouse": "11th house of groups and visions",
+    "color": "blue",
+    "sisterSign": "Leo"
+  },
+  {
+    "id": "12",
+    "name": "Pisces",
+    "description": "also most people I have disliked",
+    "startDate": "Febraury 19th",
+    "endDate": "March 20th",
+    "tarotCard": "The Moon",
+    "element": "water",
+    "rulingPlanet": "Neptune",
+    "rulingHouse": "12th house of subconscious",
+    "color": "light green",
+    "sisterSign": "Virgo"
+  }
 ]
