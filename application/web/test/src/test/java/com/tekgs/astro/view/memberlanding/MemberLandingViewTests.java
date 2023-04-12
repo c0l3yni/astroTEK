@@ -19,7 +19,7 @@ public class MemberLandingViewTests extends GauntletTest {
     public void directNav() {
         UserDefinition userDefinition = UserDefinition.getInstance().withUsername("user123").withPassword("pass123");
         MemberLandingViewExpected expected = MemberLandingViewExpected.getInstance();
-        MemberLandingView actual = LoginView.directNav(userDefinition).inLoginRegion().login(userDefinition);
+        MemberLandingView actual = LoginView.directNav().inLoginRegion().login(userDefinition);
         then(MemberLandingViewCalibrator.getInstance(expected, actual));
     }
 }

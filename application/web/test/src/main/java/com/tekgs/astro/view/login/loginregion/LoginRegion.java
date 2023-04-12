@@ -5,7 +5,7 @@ import com.softwareonpurpose.uinavigator.UiLocatorType;
 import com.softwareonpurpose.uinavigator.UiRegion;
 import com.softwareonpurpose.uinavigator.UiView;
 import com.tekgs.astro.data.user.UserDefinition;
-import com.tekgs.astro.view.landing.LandingView;
+import com.tekgs.astro.view.login.LoginView;
 import com.tekgs.astro.view.memberlanding.MemberLandingView;
 
 public class LoginRegion extends UiRegion implements LoginRegionCalibratable {
@@ -20,7 +20,6 @@ public class LoginRegion extends UiRegion implements LoginRegionCalibratable {
     public static LoginRegion getInstance(UiElement uielement) {
         return new LoginRegion(uielement);
     }
-
 
     private UiElement getUsernameFieldElement() {
         return UiElement.getInstance("Username field", UiLocatorType.ID, "username", this.getElement());
@@ -61,5 +60,12 @@ public class LoginRegion extends UiRegion implements LoginRegionCalibratable {
         this.getPasswordFieldElement().set(userDefinition.getPassword());
         getSubmitButtonElement().click();
         return UiView.expect(MemberLandingView.class);
+    }
+
+    public LoginView login_fail(UserDefinition userDefinition) {
+        this.getUsernameFieldElement().set(userDefinition.getUsername());
+        this.getPasswordFieldElement().set(userDefinition.getPassword());
+        getSubmitButtonElement().click();
+        return UiView.expect(LoginView.class);
     }
 }

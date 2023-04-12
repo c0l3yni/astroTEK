@@ -1,44 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import users from "../../data/users.json"
 
 function LoginRegion() {
-	const testUsername = new URLSearchParams(window.location.search).get("username");
-	const testPassword = new URLSearchParams(window.location.search).get("password");
-	let dataUsername = users.map((user) => user.username);
-	let dataPassword = users.map((user) => user.password);
+	const [username, setUsername] = useState("");
+	const [password, setPassword] = useState("");
+	const foundUsername = users.map((user) => user.username);
+	console.log(foundUsername)
+	console.log(username)
+	const foundPassword = users.map((user) => user.password);
 	const navigate = useNavigate();
+	const handleUsernameChange = event => {
+		setUsername(event.target.value);
+	}
+	const handlePasswordChange = event => {
+		setPassword(event.target.value);
+	}
 
 	function navToMember() {
 		navigate("/member-landing");
 	}
 
-	function badMsg() {
-		if(document.getElementById("username").innerHTML === null || !document.getElementById("password").innerText === null){
-			return "" 
+	function isUserValid() {
+		if (foundUsername[0] === username && foundPassword[0] === password) {
+			return "";
 		} else {
-			"Incorrect credentials provided";
+			return "Invalid username or password.";
 		}
-	}
-	
-	function doCredsMatch() {	
-		if(testUsername == dataUsername && testPassword == dataPassword) {
-			return navToMember();
-		} else {
-			return badMsg();
-		}
+	}  
+
+	function donav() {
+		return isUserValid() ? "" : navToMember() 
 	}
 	
 	return (		
 		<form id="login-region">
 			<div id="row" disabled>
-				<span >Username: </span><input placeholder="username" id="username" type="text"></input>
+				<span >Username: </span>
+				<input 
+				placeholder="username" 
+				id="username" 
+				type="text" 
+				value={username}
+				onChange={handleUsernameChange}></input>
 			</div>
 			<div id="row" >
-				<span>Password: </span><input placeholder="password" id="password" type="password"></input>
+				<span>Password: </span>
+				<input 
+				placeholder="password" 
+				id="password" 
+				type="password" 
+				value={password}
+				onChange={handlePasswordChange}></input>
 			</div>
-			<div id="bad-credentials">{badMsg()}</div>
-			<button id="submit-button" type="button" onClick={doCredsMatch}>Login</button>
+			<div id="bad-credentials">{isUserValid()}</div>
+			<button id="submit-button" type="button"onClick={donav}>Login</button>
 		</form>
 	);
 }

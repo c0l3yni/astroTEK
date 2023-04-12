@@ -21,7 +21,7 @@ public class LoginViewTests extends GauntletTest {
     public void failed() {
         UserDefinition userDefinition = UserDefinition.getInstance().withUsername("nonuser").withPassword("invalid");
         LoginViewExpected expected = LoginViewExpected.getFailedInstance(userDefinition);
-        LoginView actual = LoginView.directNav(userDefinition);
+        LoginView actual = LoginView.directNav().inLoginRegion().login_fail(userDefinition);
         then(LoginViewCalibrator.getInstance(expected, actual));
     }
 }
