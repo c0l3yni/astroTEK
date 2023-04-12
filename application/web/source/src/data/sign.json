@@ -2,7 +2,7 @@
   {
     "id": "1",
     "name": "Aries",
-    "description": "Thomas",
+    "description": "No filter, gets angry- then forgets why they were angry, naturally brave, impatient, easily bored, capable of juggling tasks",
     "startDate": "March 21st",
     "endDate": "April 19th",
     "tarotCard": "The Emperor",
@@ -10,12 +10,13 @@
     "rulingPlanet": "Mars",
     "rulingHouse": "1st house of self",
     "color": "red",
-    "sisterSign": "Libra"
+    "sisterSign": "Libra",
+    "modality": "cardinal"
   },
   {
     "id": "2",
     "name": "Taurus",
-    "description": "my brother",
+    "description": "All or nothing mindset, hates big changes, homebody, dependable, determined and committed, can be overprotective",
     "startDate": "April 20th",
     "endDate": "May 20th",
     "tarotCard": "The Hierophant",
@@ -23,12 +24,13 @@
     "rulingPlanet": "Venus",
     "rulingHouse": "2nd house of worth",
     "color": "green",
-    "sisterSign": "Scorpio"
+    "sisterSign": "Scorpio",
+    "modality": "fixed"
   },
   {
     "id": "3",
     "name": "Gemini",
-    "description": "my duaghter",
+    "description": "charismatic, uses humor as a crutch, knows a little about everything, hard to focus, sees all the sides for an argument",
     "startDate": "May 21st",
     "endDate": "June 20th",
     "tarotCard": "The Lovers",
@@ -36,12 +38,13 @@
     "rulingPlanet": "Mercury",
     "rulingHouse": "3rd house of communication",
     "color": "yellow",
-    "sisterSign": "Saggitarius"
+    "sisterSign": "Saggitarius",
+    "modality": "mutable"
   },
   {
     "id": "4",
     "name": "Cancer",
-    "description": "Waleed",
+    "description": "feels deeply, takes on other people's feelings and problems, forgives but never forgets, loyal",
     "startDate": "June 21st",
     "endDate": "July 22nd",
     "tarotCard": "The Chariot",
@@ -49,12 +52,13 @@
     "rulingPlanet": "Moon",
     "rulingHouse": "4th house of security",
     "color": "silver and white",
-    "sisterSign": "Cancer"
+    "sisterSign": "Cancer",
+    "modality": "cardinal"
   },
   {
     "id": "5",
     "name": "Leo",
-    "description": "Nicole",
+    "description": "warm and creative, often placed in a leadership role, insecure, wants to be seen as valuable, values others opinions more than their own",
     "startDate": "July 23rd",
     "endDate": "August 22nd",
     "tarotCard": "Strength",
@@ -62,12 +66,13 @@
     "rulingPlanet": "Sun",
     "rulingHouse": "5th house of pleasure",
     "color": "gold",
-    "sisterSign": "Aquarius"
+    "sisterSign": "Aquarius",
+    "modality": "fixed"
   },
   {
     "id": "6",
     "name": "Virgo",
-    "description": "my dad",
+    "description": "decisive, spatially aware, thoughts move faster than they do, can come up with quick fixes for anything, needs to feel useful",
     "startDate": "August 23rd",
     "endDate": "September 22nd",
     "tarotCard": "Hermit",
@@ -75,12 +80,13 @@
     "rulingPlanet": "Mercury",
     "rulingHouse": "6th house of routine",
     "color": "brown and green",
-    "sisterSign": "Pisces"
+    "sisterSign": "Pisces",
+    "modality": "mutable"
   },
   {
     "id": "7",
     "name": "Libra",
-    "description": "Taylor",
+    "description": "harmonious, conflict avoidant, sees every side, seen as indecisive, prone to fantasy, enjoys being around others",
     "startDate": "September 23rd",
     "endDate": "October 22nd",
     "tarotCard": "Justice",
@@ -88,12 +94,13 @@
     "rulingPlanet": "Venus",
     "rulingHouse": "7th house of relationships",
     "color": "pink and light blue",
-    "sisterSign": "Aries"
+    "sisterSign": "Aries",
+    "modality": "cardinal"
   },
   {
     "id": "8",
     "name": "Scorpio",
-    "description": "Ashley",
+    "description": "passionate, assertive, determined, fearless, hates dishonesty, influencers but can become manipulative",
     "startDate": "October 23rd",
     "endDate": "November 21st",
     "tarotCard": "Death",
@@ -101,12 +108,13 @@
     "rulingPlanet": "Pluto",
     "rulingHouse": "8th house of intimacy",
     "color": "black",
-    "sisterSign": "Taurus"
+    "sisterSign": "Taurus",
+    "modality": "fixed"
   },
   {
     "id": "9",
     "name": "Sagittarius",
-    "description": "my moon sign",
+    "description": "always curious, travelers, always ready for change, optimistic, overly honest, strong moral compass, often misunderstood",
     "startDate": "November 22nd",
     "endDate": "December 21st",
     "tarotCard": "Temperance",
@@ -114,12 +122,13 @@
     "rulingPlanet": "Jupiter",
     "rulingHouse": "9th house of expansion",
     "color": "purple",
-    "sisterSign": "Gemini"
+    "sisterSign": "Gemini",
+    "modality": "mutable"
   },
   {
     "id": "10",
     "name": "Capricorn",
-    "description": "Brie",
+    "description": "traditional, bounds of self control, realistic, capable, dependable, can be seen as workaholics, can be seen as negative",
     "startDate": "December 22nd",
     "endDate": "January 19th",
     "tarotCard": "The Devil",
@@ -127,12 +136,13 @@
     "rulingPlanet": "Saturn",
     "rulingHouse": "10th house of career",
     "color": "grey and brown",
-    "sisterSign": "Cancer"
+    "sisterSign": "Cancer",
+    "modality": "cardinal"
   },
   {
     "id": "11",
     "name": "Aquarius",
-    "description": "every person I have ever disliked",
+    "description": "eccentric and energetic, highly intellectual, tend to fight for idealistic causes, need mental stimulation, easily bored",
     "startDate": "January 20th",
     "endDate": "February 18th",
     "tarotCard": "The Star",
@@ -140,12 +150,13 @@
     "rulingPlanet": "Uranus",
     "rulingHouse": "11th house of groups and visions",
     "color": "blue",
-    "sisterSign": "Leo"
+    "sisterSign": "Leo",
+    "modality": "fixed"
   },
   {
     "id": "12",
     "name": "Pisces",
-    "description": "also most people I have disliked",
+    "description": "selfless helpers, empathetic, can lack personal boundaries, creative and imaginative, tend to lean toward spirtuality",
     "startDate": "Febraury 19th",
     "endDate": "March 20th",
     "tarotCard": "The Moon",
@@ -153,6 +164,7 @@
     "rulingPlanet": "Neptune",
     "rulingHouse": "12th house of subconscious",
     "color": "light green",
-    "sisterSign": "Virgo"
+    "sisterSign": "Virgo",
+    "modality": "mutable"
   }
 ]
