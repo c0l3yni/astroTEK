@@ -1,9 +1,10 @@
 package com.tekgs.astro.view.signDetails;
 
 import com.tekgs.astro.data.sign.Sign;
+import com.tekgs.astro.view.signDetails.SignDetailsRegion.SignDetailsRegionCalibratable;
+import com.tekgs.astro.view.signDetails.SignDetailsRegion.SignDetailsRegionExpected;
 
 public class SignDetailsViewExpected implements SignDetailsViewCalibratable {
-    
     private final Sign sign;
     
     private SignDetailsViewExpected(Sign sign) {
@@ -22,14 +23,9 @@ public class SignDetailsViewExpected implements SignDetailsViewCalibratable {
     public String getSignViewTitle() {
         return "Sign";
     }
-    
+
     @Override
-    public String getSignName() {
-        return this.sign.getName();
-    }
-    
-    @Override
-    public String getSignDescription() {
-        return this.sign.getDescription();
+    public SignDetailsRegionCalibratable inSignDetailsRegion() {
+        return SignDetailsRegionExpected.getInstance(sign);
     }
 }

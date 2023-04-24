@@ -3,6 +3,8 @@ package com.tekgs.astro.view.signDetails;
 import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;
 import com.softwareonpurpose.uinavigator.UiView;
+import com.tekgs.astro.view.signDetails.SignDetailsRegion.SignDetailsRegion;
+import com.tekgs.astro.view.signDetails.SignDetailsRegion.SignDetailsRegionCalibratable;
 import org.softwareonpurpose.softwaregauntlet.Environment;
 
 public class SignDetailsView extends UiView implements SignDetailsViewCalibratable {
@@ -26,29 +28,16 @@ public class SignDetailsView extends UiView implements SignDetailsViewCalibratab
         return UiElement.getInstance("'Sign' view", UiLocatorType.ID, "sign", this.getElement());
     }
     
-    private UiElement getNameElement() {
-        return UiElement.getInstance("'Sign Name' text", UiLocatorType.ID, "sign-name", this.getElement());
-    }
-    
-    private UiElement getDescriptionElement() {
-        return UiElement.getInstance("'Sign Description' text", UiLocatorType.ID, "sign-description", this.getElement());
-    }
-    
     @Override
     public String getSignViewTitle() {
         return this.getTitleElement().getText();
     }
-    
+
     @Override
-    public String getSignName() {
-        return this.getNameElement().getText();
+    public SignDetailsRegion inSignDetailsRegion() {
+        return SignDetailsRegion.getInstance(this.getElement());
     }
-    
-    @Override
-    public String getSignDescription() {
-        return this.getDescriptionElement().getText();
-    }
-    
+
     @Override
     protected boolean confirmElementStates() {
         return this.getElement().waitUntilVisible();

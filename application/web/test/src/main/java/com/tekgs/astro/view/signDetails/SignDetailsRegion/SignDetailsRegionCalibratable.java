@@ -1,12 +1,8 @@
-package com.tekgs.astro.data.sign;
+package com.tekgs.astro.view.signDetails.SignDetailsRegion;
 
-public interface SignCalibratable {
+public interface SignDetailsRegionCalibratable {
     String getName();
-    
     String getDescription();
-    
-    String getId();
-
     String getStartDate();
     String getEndDate();
     String getTarotCard();
@@ -16,7 +12,4 @@ public interface SignCalibratable {
     String getColor();
     String getSisterSign();
     String getModality();
-
-
-    boolean equivalent(SignCalibratable comparator);
 }
