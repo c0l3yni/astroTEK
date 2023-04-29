@@ -18,16 +18,16 @@ public class SignDetailsRegionCalibrator extends Calibrator {
 
     @Override
     protected void executeVerifications() {
-        verify("'Sign Name' text", expected.getName(), actual.getName());
-        verify("'Sign Description' text", expected.getDescription(), actual.getDescription());
-        verify("'Sign Start Date' text", expected.getStartDate(), actual.getStartDate());
-        verify("'Sign End Date' text", expected.getEndDate(), actual.getEndDate());
-        verify("'Sign Tarot Card' text", expected.getTarotCard(), actual.getTarotCard());
+        verify("'Sign Name' text", expected.getSignName(), actual.getSignName());
+        verify("'Sign Description' text", expected.getSignDescription(), actual.getSignDescription());
+        verify("'Sign Start Date' text", expected.getSignStartDate(), actual.getSignStartDate());
+        verify("'Sign End Date' text", expected.getSignEndDate(), actual.getSignEndDate());
+        verify("'Sign Tarot Card' text", expected.getSignTarotCard(), actual.getSignTarotCard());
         verify("'Sign Element' text", expected.getSignElement(), actual.getSignElement());
-        verify("'Sign Ruling Planet' text", expected.getRulingPlanet(), actual.getRulingPlanet());
-        verify("'Sign Ruling House' text", expected.getRulingHouse(), actual.getRulingHouse());
-        verify("'Sign Color' text", expected.getColor(), actual.getColor());
+        verify("'Sign Ruling Planet' text", expected.getSignRulingPlanet(), actual.getSignRulingPlanet());
+        verify("'Sign Ruling House' text", expected.getSignRulingHouse(), actual.getSignRulingHouse());
+        verify("'Sign Color' text", expected.getSignColor(), actual.getSignColor());
         verify("'Sign Sister Sign' text", expected.getSisterSign(), actual.getSisterSign());
-        verify("'Sign Modality' text", expected.getModality(), actual.getModality());
+        verify("'Sign Modality' text", expected.getSignModality(), actual.getSignModality());
     }
 }

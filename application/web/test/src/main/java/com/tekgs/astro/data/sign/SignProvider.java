@@ -12,6 +12,7 @@ public class SignProvider {
     public Sign get() {
         return this.signRepository.query(SignDefinition.getInstance());
     }
+    
     public Sign get(SignDefinition signDefinition) {
         return this.signRepository.query(signDefinition);
     }

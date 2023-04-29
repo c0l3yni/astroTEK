@@ -4,7 +4,6 @@ import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;
 import com.softwareonpurpose.uinavigator.UiView;
 import com.tekgs.astro.view.signDetails.SignDetailsRegion.SignDetailsRegion;
-import com.tekgs.astro.view.signDetails.SignDetailsRegion.SignDetailsRegionCalibratable;
 import org.softwareonpurpose.softwaregauntlet.Environment;
 
 public class SignDetailsView extends UiView implements SignDetailsViewCalibratable {
@@ -17,6 +16,11 @@ public class SignDetailsView extends UiView implements SignDetailsViewCalibratab
     public SignDetailsView() {
         super(String.format("%s/%s", DOMAIN_URI, RELATIVE_URI),
                 UiElement.getInstance(DESCRIPTION, LOCATOR_TYPE, LOCATOR_VALUE));
+    }
+    
+    public static SignDetailsView directNav() {
+        new SignDetailsView().load();
+        return UiView.expect(SignDetailsView.class);
     }
     
     public static SignDetailsView directNav(String id) {
@@ -32,12 +36,12 @@ public class SignDetailsView extends UiView implements SignDetailsViewCalibratab
     public String getSignViewTitle() {
         return this.getTitleElement().getText();
     }
-
+    
     @Override
     public SignDetailsRegion inSignDetailsRegion() {
         return SignDetailsRegion.getInstance(this.getElement());
     }
-
+    
     @Override
     protected boolean confirmElementStates() {
         return this.getElement().waitUntilVisible();

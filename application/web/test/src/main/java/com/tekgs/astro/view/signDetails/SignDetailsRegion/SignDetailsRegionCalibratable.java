@@ -1,15 +1,15 @@
 package com.tekgs.astro.view.signDetails.SignDetailsRegion;
 
 public interface SignDetailsRegionCalibratable {
-    String getName();
-    String getDescription();
-    String getStartDate();
-    String getEndDate();
-    String getTarotCard();
+    String getSignName();
+    String getSignDescription();
+    String getSignStartDate();
+    String getSignEndDate();
+    String getSignTarotCard();
     String getSignElement();
-    String getRulingPlanet();
-    String getRulingHouse();
-    String getColor();
+    String getSignRulingPlanet();
+    String getSignRulingHouse();
+    String getSignColor();
     String getSisterSign();
-    String getModality();
+    String getSignModality();
 }

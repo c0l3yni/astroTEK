@@ -26,6 +26,6 @@ public class SignDetailsViewExpected implements SignDetailsViewCalibratable {
 
     @Override
     public SignDetailsRegionCalibratable inSignDetailsRegion() {
-        return SignDetailsRegionExpected.getInstance(sign);
+        return SignDetailsRegionExpected.getInstance(this.sign);
     }
 }

@@ -1,4 +1,5 @@
 package com.tekgs.astro.data.sign;
+
 @SuppressWarnings("unused") //  Gson is used to populate the fields
 public class Sign implements SignCalibratable {
     private String id;
@@ -13,46 +14,57 @@ public class Sign implements SignCalibratable {
     private String color;
     private String sisterSign;
     private String modality;
-
+    
     @Override
     public String getId() {
         return this.id;
     }
+    
     @Override
     public String getStartDate() {
-        return startDate;
+        return this.startDate;
     }
+    
     @Override
     public String getEndDate() {
-        return endDate;
+        return this.endDate;
     }
+    
     @Override
     public String getTarotCard() {
-        return tarotCard;
+        return this.tarotCard;
     }
+    
     @Override
     public String getSignElement() {
-        return element;
+        return this.element;
     }
+    
     @Override
     public String getRulingPlanet() {
-        return rulingPlanet;
+        return this.rulingPlanet;
     }
+    
     @Override
     public String getRulingHouse() {
-        return rulingHouse;
+        return this.rulingHouse;
     }
+    
     @Override
-    public String getColor() {return color;}
+    public String getColor() {
+        return this.color;
+    }
+    
     @Override
     public String getSisterSign() {
-        return sisterSign;
+        return this.sisterSign;
     }
+    
     @Override
     public String getModality() {
-        return modality;
+        return this.modality;
     }
-
+    
     @Override
     public String getName() {
         return this.name;
@@ -62,14 +74,15 @@ public class Sign implements SignCalibratable {
     public String getDescription() {
         return this.description;
     }
+    
     @Override
     public boolean equivalent(SignCalibratable comparator) {
         if (comparator == null) {
             return false;
         }
-        if (comparator.getId() != null && this.getId().equals(comparator.getId())) {
-            return true;
-        }
+//        if (comparator.getId() != null && this.getId().equals(comparator.getId())) {
+//            return true;
+//        }
         boolean isEquivalent = comparator.getName() == null || this.getName().equals(comparator.getName());
         isEquivalent &= comparator.getDescription() == null || this.getDescription().equals(comparator.getDescription());
         isEquivalent &= comparator.getColor() == null || this.getColor().equals(comparator.getColor());
