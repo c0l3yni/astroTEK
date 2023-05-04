@@ -80,9 +80,9 @@ public class Sign implements SignCalibratable {
         if (comparator == null) {
             return false;
         }
-//        if (comparator.getId() != null && this.getId().equals(comparator.getId())) {
-//            return true;
-//        }
+        if (comparator.getId() != null && this.getId().equals(comparator.getId())) {
+            return true;
+        }
         boolean isEquivalent = comparator.getName() == null || this.getName().equals(comparator.getName());
         isEquivalent &= comparator.getDescription() == null || this.getDescription().equals(comparator.getDescription());
         isEquivalent &= comparator.getColor() == null || this.getColor().equals(comparator.getColor());

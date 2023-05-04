@@ -1,0 +1,9 @@
+DBN
+Key Promoter X
+color.scheme.Ayu Dark
+color.scheme.Tokyo Night
+com.fabio
+com.markskelton.one-dark-theme
+com.villains.intelij.plugin.trashpandatheme
+indent-rainbow.indent-rainbow
+izhangzhihao.rainbow.brackets
