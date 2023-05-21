@@ -21,13 +21,13 @@ public class ChartView extends UiView implements ChartViewCalibratable {
         return UiView.expect(ChartView.class);
     }
     
-    private UiElement getChartViewTitleElement() {
-        return UiElement.getInstance("Chart View", UiLocatorType.ID, "chart", this.getElement());
+    private UiElement getHeadingElement() {
+        return UiElement.getInstance("'Chart' heading", UiLocatorType.ID, "chart-heading", this.getElement());
     }
     
     @Override
-    public String getChartViewTitle() {
-        return getChartViewTitleElement().getText();
+    public String getHeading() {
+        return getHeadingElement().getText();
     }
     
     @Override

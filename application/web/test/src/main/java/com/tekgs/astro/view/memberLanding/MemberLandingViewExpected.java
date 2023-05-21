@@ -11,6 +11,6 @@ public class MemberLandingViewExpected implements MemberLandingViewCalibratable 
     
     @Override
     public String getHeading() {
-        return "Member";
+        return "Member Landing";
     }
 }

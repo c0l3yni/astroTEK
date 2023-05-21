@@ -24,8 +24,8 @@ public class LandingView extends UiView implements LandingViewCalibratable {
         return UiView.expect(LandingView.class);
     }
     
-    private UiElement getTitleElement() {
-        return UiElement.getInstance("Landing", UiLocatorType.ID, "landing", this.getElement());
+    private UiElement getHeadingElement() {
+        return UiElement.getInstance("Landing", UiLocatorType.ID, "landing-heading", this.getElement());
     }
     
     private UiElement getNavToLoginElement() {
@@ -47,8 +47,8 @@ public class LandingView extends UiView implements LandingViewCalibratable {
     }
     
     @Override
-    public String getTitle() {
-        return getTitleElement().getText();
+    public String getHeading() {
+        return getHeadingElement().getText();
     }
     
     @Override

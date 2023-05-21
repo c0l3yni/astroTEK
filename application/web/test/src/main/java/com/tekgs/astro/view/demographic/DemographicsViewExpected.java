@@ -7,7 +7,7 @@ public class DemographicsViewExpected implements DemographicsViewCalibratable {
     }
     
     @Override
-    public String getInputFormTitle() {
+    public String getHeading() {
         return "Demographics";
     }
 }

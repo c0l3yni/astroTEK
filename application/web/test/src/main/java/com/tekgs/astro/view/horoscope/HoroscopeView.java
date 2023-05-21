@@ -22,13 +22,13 @@ public class HoroscopeView extends UiView implements HoroscopeViewCalibratable {
         return UiView.expect(HoroscopeView.class);
     }
     
-    private UiElement getHoroscopeViewTitleElement() {
-        return UiElement.getInstance("'Horoscope' title", UiLocatorType.ID, "horoscope", this.getElement());
+    private UiElement getHeadingElement() {
+        return UiElement.getInstance("'Horoscope' heading", UiLocatorType.ID, "horoscope-heading", this.getElement());
     }
     
     @Override
-    public String getHoroscopeViewTitle() {
-        return getHoroscopeViewTitleElement().getText();
+    public String getHeading() {
+        return getHeadingElement().getText();
     }
     
     @Override

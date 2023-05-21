@@ -8,10 +8,10 @@ import org.softwareonpurpose.softwaregauntlet.Environment;
 
 public class SignDetailsView extends UiView implements SignDetailsViewCalibratable {
     private static final String DOMAIN_URI = Environment.getInstance().getDomainURL();
-    private static final String RELATIVE_URI = "sign";
-    private static final String DESCRIPTION = "'Sign' view";
+    private static final String RELATIVE_URI = "sign-details";
+    private static final String DESCRIPTION = "'Sign Details' view";
     private static final String LOCATOR_TYPE = UiLocatorType.ID;
-    private static final String LOCATOR_VALUE = "sign-view";
+    private static final String LOCATOR_VALUE = "sign-details-view";
     
     public SignDetailsView() {
         super(String.format("%s/%s", DOMAIN_URI, RELATIVE_URI),
@@ -28,13 +28,13 @@ public class SignDetailsView extends UiView implements SignDetailsViewCalibratab
         return UiView.expect(SignDetailsView.class);
     }
     
-    private UiElement getTitleElement() {
-        return UiElement.getInstance("'Sign' view", UiLocatorType.ID, "sign", this.getElement());
+    private UiElement getHeadingElement() {
+        return UiElement.getInstance("'Sign Details' view", UiLocatorType.ID, "sign-details-heading", this.getElement());
     }
     
     @Override
-    public String getSignViewTitle() {
-        return this.getTitleElement().getText();
+    public String getHeading() {
+        return this.getHeadingElement().getText();
     }
     
     @Override

@@ -5,7 +5,7 @@ import com.tekgs.astro.view.signDetails.SignDetailsRegion.SignDetailsRegionCalib
 
 public class SignDetailsViewCalibrator extends Calibrator {
     
-    private static final String DESCRIPTION = "'Sign' View";
+    private static final String DESCRIPTION = "'Sign Details' view";
     private final SignDetailsViewExpected expected;
     private final SignDetailsView actual;
     
@@ -22,6 +22,6 @@ public class SignDetailsViewCalibrator extends Calibrator {
     
     @Override
     protected void executeVerifications() {
-        verify("'Sign Details' view title", expected.getSignViewTitle(), actual.getSignViewTitle());
+        verify("'Sign Details' heading", expected.getHeading(), actual.getHeading());
     }
 }

@@ -12,4 +12,6 @@ public class ChartViewTests extends GauntletTest {
         ChartView actual = ChartView.directNav();
         then(ChartViewCalibrator.getInstance(expected, actual));
     }
+    
+    
 }

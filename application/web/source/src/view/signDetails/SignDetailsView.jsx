@@ -7,8 +7,8 @@ function SignDetailsView() {
 	const id = getUrlParam("sign_id");
 	const sign = signsDetails.find((sign) => sign.id === id);
 	return (
-		<div id="sign-view">
-			<HeadingRegion heading="Sign" />
+		<div id="sign-details-view">
+			<HeadingRegion heading="Sign Details" />
 			<SignDetailsRegion data-sign="id" sign={sign} />
 		</div>
 	);

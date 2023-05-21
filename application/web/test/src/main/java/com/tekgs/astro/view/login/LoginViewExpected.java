@@ -7,7 +7,7 @@ public class LoginViewExpected implements LoginViewCalibratable {
     }
     
     @Override
-    public String getLoginTitle() {
+    public String getHeading() {
         return "Login";
     }
 }

@@ -7,7 +7,7 @@ public class ChartViewExpected implements ChartViewCalibratable {
     }
     
     @Override
-    public String getChartViewTitle() {
+    public String getHeading() {
         return "Chart";
     }
 }

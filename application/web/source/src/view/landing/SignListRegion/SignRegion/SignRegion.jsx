@@ -5,7 +5,7 @@ function SignRegion({ sign }) {
 	const navigate = useNavigate();
 
 	function navToSign() {
-		navigate(`/sign?sign_id=${sign.id}`);
+		navigate(`/sign-details?sign_id=${sign.id}`);
 	}
 
 	return (

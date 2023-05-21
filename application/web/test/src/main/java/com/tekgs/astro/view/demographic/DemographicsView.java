@@ -22,14 +22,14 @@ public class DemographicsView extends UiView implements DemographicsViewCalibrat
         return UiView.expect(DemographicsView.class);
     }
     
-    private UiElement getInputFormTitleElement() {
-        return UiElement.getInstance("'Demographic' Form Input Title", UiLocatorType.ID,
-                "demographics", this.getElement());
+    private UiElement getHeadingElement() {
+        return UiElement.getInstance("'Demographics' heading", UiLocatorType.ID,
+                "demographics-heading", this.getElement());
     }
     
     @Override
-    public String getInputFormTitle() {
-        return getInputFormTitleElement().getText();
+    public String getHeading() {
+        return getHeadingElement().getText();
     }
     
     @Override

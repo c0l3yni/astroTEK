@@ -3,7 +3,7 @@ package com.tekgs.astro.view.chart;
 import com.softwareonpurpose.calibrator4test.Calibrator;
 
 public class ChartViewCalibrator extends Calibrator {
-    private static final String DESCRIPTION = "Chart View";
+    private static final String DESCRIPTION = "'Chart' view";
     private final ChartView actual;
     private final ChartViewExpected expected;
     
@@ -19,6 +19,6 @@ public class ChartViewCalibrator extends Calibrator {
     
     @Override
     protected void executeVerifications() {
-        verify("Chart View Title", expected.getChartViewTitle(), actual.getChartViewTitle());
+        verify("'Chart' heading", expected.getHeading(), actual.getHeading());
     }
 }

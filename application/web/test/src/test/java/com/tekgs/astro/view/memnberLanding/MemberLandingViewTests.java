@@ -1,4 +1,4 @@
-package com.tekgs.astro.view;
+package com.tekgs.astro.view.memnberLanding;
 
 import com.tekgs.astro.view.memberLanding.MemberLandingView;
 import com.tekgs.astro.view.memberLanding.MemberLandingViewCalibrator;
@@ -16,3 +16,6 @@ public class MemberLandingViewTests extends GauntletTest {
         then(MemberLandingViewCalibrator.getInstance(expected, actual));
     }
 }
+
+
+

@@ -3,7 +3,7 @@ package com.tekgs.astro.view.horoscope;
 import com.softwareonpurpose.calibrator4test.Calibrator;
 
 public class HoroscopeViewCalibrator extends Calibrator {
-    private static final String DESCRIPTION = "Horoscope View";
+    private static final String DESCRIPTION = "'Horoscope' view";
     private final HoroscopeViewExpected expected;
     private final HoroscopeView actual;
     
@@ -19,6 +19,6 @@ public class HoroscopeViewCalibrator extends Calibrator {
     
     @Override
     protected void executeVerifications() {
-        verify("'Horoscope' view title", expected.getHoroscopeViewTitle(), actual.getHoroscopeViewTitle());
+        verify("'Horoscope' heading", expected.getHeading(), actual.getHeading());
     }
 }

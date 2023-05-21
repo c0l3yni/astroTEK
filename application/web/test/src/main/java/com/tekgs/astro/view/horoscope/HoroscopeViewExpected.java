@@ -7,7 +7,7 @@ public class HoroscopeViewExpected implements HoroscopeViewCalibratable {
     }
     
     @Override
-    public String getHoroscopeViewTitle() {
+    public String getHeading() {
         return "Horoscope";
     }
 }

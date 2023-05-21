@@ -20,8 +20,8 @@ public class SignDetailsViewExpected implements SignDetailsViewCalibratable {
     }
     
     @Override
-    public String getSignViewTitle() {
-        return "Sign";
+    public String getHeading() {
+        return "Sign Details";
     }
 
     @Override

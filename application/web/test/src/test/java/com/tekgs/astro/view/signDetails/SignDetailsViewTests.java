@@ -6,7 +6,7 @@ import com.tekgs.astro.view.landing.LandingView;
 import org.softwareonpurpose.softwaregauntlet.GauntletTest;
 import org.testng.annotations.Test;
 
-@Test(groups = {GauntletTest.Application.ASTRO_TEK, GauntletTest.View.SIGN})
+@Test(groups = {GauntletTest.Application.ASTRO_TEK, GauntletTest.View.SIGN_DETAILS})
 public class SignDetailsViewTests extends GauntletTest {
     
     @Test(groups = {TestSuite.SMOKE})
@@ -16,7 +16,7 @@ public class SignDetailsViewTests extends GauntletTest {
         then(SignDetailsViewCalibrator.getInstance(expected, actual));
     }
     
-    @Test(groups = {TestSuite.DEBUG}, dependsOnMethods = "smoke")
+    @Test(groups = {}, dependsOnMethods = "smoke")
     public void fromLandingView() {
         Sign sign = SignProvider.getInstance().get();
         SignDetailsViewExpected expected = SignDetailsViewExpected.getInstance(sign);

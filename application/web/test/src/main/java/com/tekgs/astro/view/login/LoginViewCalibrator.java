@@ -3,7 +3,7 @@ package com.tekgs.astro.view.login;
 import com.softwareonpurpose.calibrator4test.Calibrator;
 
 public class LoginViewCalibrator extends Calibrator {
-    public static final String DESCRIPTION = "'Login' View";
+    public static final String DESCRIPTION = "'Login' view";
     public final LoginViewExpected expected;
     public final LoginView actual;
     
@@ -19,6 +19,6 @@ public class LoginViewCalibrator extends Calibrator {
     
     @Override
     protected void executeVerifications() {
-        verify("'Login View' title", expected.getLoginTitle(), actual.getLoginTitle());
+        verify("'Login' heading", expected.getHeading(), actual.getHeading());
     }
 }

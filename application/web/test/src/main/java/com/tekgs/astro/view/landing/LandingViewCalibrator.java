@@ -4,7 +4,7 @@ import com.softwareonpurpose.calibrator4test.Calibrator;
 import com.tekgs.astro.view.landing.signListRegion.SignListRegionCalibrator;
 
 public class LandingViewCalibrator extends Calibrator {
-    private static final String DESCRIPTION = "'Landing' View";
+    private static final String DESCRIPTION = "'Landing' view";
     private final LandingView actual;
     private final LandingViewExpected expected;
     
@@ -21,6 +21,6 @@ public class LandingViewCalibrator extends Calibrator {
     
     @Override
     protected void executeVerifications() {
-        verify("Landing View message", expected.getTitle(), actual.getTitle());
+        verify("'Landing' heading", expected.getHeading(), actual.getHeading());
     }
 }

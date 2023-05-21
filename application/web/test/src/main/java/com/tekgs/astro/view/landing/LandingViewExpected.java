@@ -12,7 +12,7 @@ public class LandingViewExpected implements LandingViewCalibratable {
     }
     
     @Override
-    public String getTitle() {
+    public String getHeading() {
         return "Home";
     }
     
