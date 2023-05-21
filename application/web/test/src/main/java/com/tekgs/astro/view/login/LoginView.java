@@ -22,20 +22,29 @@ public class LoginView extends UiView implements LoginViewCalibratable {
         new LoginView().load();
         return UiView.expect(LoginView.class);
     }
-    
-    /*
-    IMPLEMENT
-     */
+
     public MemberLandingView submitLogin(User user) {
-        return new MemberLandingView();
+        this.getUsernameInputElement().set(user.getUsername());
+        this.getPasswordInputElement().set(user.getPassword());
+        this.getLoginButtonElement().click();
+        return UiView.expect(MemberLandingView.class);
+    }
+    
+    private UiElement getUsernameInputElement() {
+        return UiElement.getInstance("'Username' input", UiLocatorType.NAME, "username-input", this.getElement());
+    }
+    
+    private UiElement getPasswordInputElement() {
+        return UiElement.getInstance("'Password' input", UiLocatorType.NAME, "password-input", this.getElement());
+    }
+    
+    private UiElement getLoginButtonElement() {
+        return UiElement.getInstance("'Login' button", UiLocatorType.ID, "login-button", this.getElement());
     }
     
     private UiElement getHeadingElement() {
-        return UiElement.getInstance("Login", UiLocatorType.ID, "login-heading", this.getElement());
+        return UiElement.getInstance("'Login' heading", UiLocatorType.ID, "login-heading", this.getElement());
     }
-    /*
-    IMPLEMENT
-     */
     
     @Override
     public String getHeading() {
