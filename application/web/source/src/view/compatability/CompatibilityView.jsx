@@ -1,10 +1,9 @@
-import React from "react";
-import TitleRegion from "../../region/TitleRegion";
+import HeadingRegion from "../../region/HeadingRegion";
 
 function CompatibilityView() {
 	return (
 		<div id="compatibility-view">
-			<TitleRegion title="Compatibility" />
+			<HeadingRegion heading="Compatibility" />
 		</div>
 	);
 }

@@ -1,10 +1,9 @@
-import React from "react";
-import TitleRegion from "../../region/TitleRegion";
+import HeadingRegion from "../../region/HeadingRegion";
 
 function HoroscopeView() {
 	return (
 		<div id="horoscope-view">
-			<TitleRegion title="Horoscope" />
+			<HeadingRegion heading="Horoscope" />
 		</div>
 	);
 }

@@ -28,7 +28,7 @@ public class MemberLandingView extends UiView implements MemberLandingViewCalibr
     }
     
     private UiElement getViewTitleElement() {
-        return UiElement.getInstance("'Member Landing' view", UiLocatorType.ID, "member-landing-title", this.getElement());
+        return UiElement.getInstance("'Member Landing' view", UiLocatorType.ID, "member", this.getElement());
     }
     
     @Override

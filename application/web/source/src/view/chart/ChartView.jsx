@@ -1,10 +1,9 @@
-import React from "react";
-import TitleRegion from "../../region/TitleRegion";
+import HeadingRegion from "../../region/HeadingRegion";
 
 function ChartView() {
 	return (
 		<div id="chart-view">
-			<TitleRegion title="Chart" />
+			<HeadingRegion heading="Chart" />
 		</div>
 	);
 }

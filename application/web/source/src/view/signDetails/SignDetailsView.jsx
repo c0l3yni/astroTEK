@@ -1,14 +1,14 @@
-import TitleRegion from "../../region/TitleRegion";
+import HeadingRegion from "../../region/HeadingRegion";
 import SignDetailsRegion from "./signDetailsRegion/SignDetailsRegion";
-import signsDetails from "../../data/sign.json";
 import getUrlParam from "../../urlParam/urlParam.js";
+import signsDetails from "../../data/sign.json";
 
 function SignDetailsView() {
 	const id = getUrlParam("sign_id");
 	const sign = signsDetails.find((sign) => sign.id === id);
 	return (
 		<div id="sign-view">
-			<TitleRegion title="Sign" />
+			<HeadingRegion heading="Sign" />
 			<SignDetailsRegion data-sign="id" sign={sign} />
 		</div>
 	);

@@ -1,10 +1,9 @@
-import React from "react";
-import TitleRegion from "../../region/TitleRegion";
+import HeadingRegion from "../../region/HeadingRegion";
 
 function DemographicsView() {
 	return (
 		<div id="demographics-view">
-			<TitleRegion title="Demographics" />
+			<HeadingRegion heading="Demographics" />
 		</div>
 	);
 }

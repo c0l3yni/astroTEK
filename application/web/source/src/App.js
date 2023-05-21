@@ -7,6 +7,7 @@ import ChartView from "./view/chart/ChartView";
 import HoroscopeView from "./view/horoscope/HoroscopeView";
 import CompatibilityView from "./view/compatability/CompatibilityView";
 import SignDetailsView from "./view/signDetails/SignDetailsView";
+import MemberLandingView from "./view/memberLanding/MemberLandingView";
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 				<Route path="/horoscope" element={<HoroscopeView />} />
 				<Route path="/compatibility" element={<CompatibilityView />} />
 				<Route path="/sign" element={<SignDetailsView />} />
+				<Route path="/member-landing" element={<MemberLandingView />} />
 			</Routes>
 		</div>
 	);

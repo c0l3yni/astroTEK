@@ -1,6 +1,5 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
-import TitleRegion from "../../region/TitleRegion";
+import HeadingRegion from "../../region/HeadingRegion";
 import SignListRegion from "./SignListRegion/SignListRegion";
 import "./landingView.css";
 
@@ -17,7 +16,7 @@ function LandingView() {
 
 	return (
 		<div id="landing-view">
-			<TitleRegion title="Home" />
+			<HeadingRegion heading="Home" />
 			<button id="nav-to-login" type="button" onClick={navToLogin}>
 				Login
 			</button>
