@@ -20,6 +20,6 @@ public class SignRegionCalibrator extends Calibrator {
     
     @Override
     protected void executeVerifications() {
-        verify("'Sign' name", expected.getSignName(), actual.getSignName());
+        verify("'Sign' name", this.expected.getSignName(), this.actual.getSignName());
     }
 }

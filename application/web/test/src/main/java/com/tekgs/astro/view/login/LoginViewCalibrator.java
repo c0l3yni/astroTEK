@@ -19,6 +19,6 @@ public class LoginViewCalibrator extends Calibrator {
     
     @Override
     protected void executeVerifications() {
-        verify("'Login' heading", expected.getHeading(), actual.getHeading());
+        verify("'Login' heading", this.expected.getHeading(), this.actual.getHeading());
     }
 }

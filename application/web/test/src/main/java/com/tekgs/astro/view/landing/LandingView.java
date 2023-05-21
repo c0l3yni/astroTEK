@@ -24,6 +24,16 @@ public class LandingView extends UiView implements LandingViewCalibratable {
         return UiView.expect(LandingView.class);
     }
     
+    public LoginView toLoginView() {
+        this.getNavToLoginElement().click();
+        return UiView.expect(LoginView.class);
+    }
+    
+    public DemographicsView toDemographicsView() {
+        this.getNavToDemographicsElement().click();
+        return UiView.expect(DemographicsView.class);
+    }
+    
     private UiElement getHeadingElement() {
         return UiElement.getInstance("Landing", UiLocatorType.ID, "landing-heading", this.getElement());
     }
@@ -34,16 +44,6 @@ public class LandingView extends UiView implements LandingViewCalibratable {
     
     private UiElement getNavToDemographicsElement() {
         return UiElement.getInstance("link to 'Demographics' view", UiLocatorType.ID, "nav-to-demographics", this.getElement());
-    }
-    
-    public LoginView toLoginView() {
-        this.getNavToLoginElement().click();
-        return UiView.expect(LoginView.class);
-    }
-    
-    public DemographicsView toDemographicsView() {
-        this.getNavToDemographicsElement().click();
-        return UiView.expect(DemographicsView.class);
     }
     
     @Override

@@ -4,7 +4,7 @@ import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;
 import com.softwareonpurpose.uinavigator.UiView;
 import com.tekgs.astro.data.user.User;
-import com.tekgs.astro.view.compatability.MemberLandingView;
+import com.tekgs.astro.view.memberLanding.MemberLandingView;
 import org.softwareonpurpose.softwaregauntlet.Environment;
 
 public class LoginView extends UiView implements LoginViewCalibratable {
@@ -23,21 +23,19 @@ public class LoginView extends UiView implements LoginViewCalibratable {
         return UiView.expect(LoginView.class);
     }
     
-    private UiElement getHeadingElement() {
-        return UiElement.getInstance("Login", UiLocatorType.ID, "login-heading", this.getElement());
-    }
-    
-    
     /*
     IMPLEMENT
      */
     public MemberLandingView submitLogin(User user) {
         return new MemberLandingView();
     }
+    
+    private UiElement getHeadingElement() {
+        return UiElement.getInstance("Login", UiLocatorType.ID, "login-heading", this.getElement());
+    }
     /*
     IMPLEMENT
      */
-    
     
     @Override
     public String getHeading() {

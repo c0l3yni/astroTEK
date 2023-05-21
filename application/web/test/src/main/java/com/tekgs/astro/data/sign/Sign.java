@@ -16,6 +16,16 @@ public class Sign implements SignCalibratable {
     private String modality;
     
     @Override
+    public String getName() {
+        return this.name;
+    }
+    
+    @Override
+    public String getDescription() {
+        return this.description;
+    }
+    
+    @Override
     public String getId() {
         return this.id;
     }
@@ -63,16 +73,6 @@ public class Sign implements SignCalibratable {
     @Override
     public String getModality() {
         return this.modality;
-    }
-    
-    @Override
-    public String getName() {
-        return this.name;
-    }
-    
-    @Override
-    public String getDescription() {
-        return this.description;
     }
     
     @Override

@@ -104,11 +104,12 @@ public abstract class GauntletTest {
         public static final String LANDING = "landing";
         
         public static final String LOGIN = "login";
-        public static final String DEMOGRAPHIC = "demographic";
+        public static final String DEMOGRAPHICS = "demographics";
         public static final String CHART = "chart";
         public static final String HOROSCOPE = "horoscope";
-        public static final String COMPATIBILITY_CALC = "compatability-calc";
-        public static final String SIGN = "sign";
+        public static final String COMPATIBILITY = "compatibility";
+        public static final String SIGN_DETAILS = "sign-details";
+        public static final String MEMBER_LANDING = "member-landing";
     }
     
     public enum Application {

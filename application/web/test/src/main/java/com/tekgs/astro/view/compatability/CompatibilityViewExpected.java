@@ -1,7 +1,7 @@
 package com.tekgs.astro.view.compatability;
 
 public class CompatibilityViewExpected implements CompatibilityViewCalibratable {
-        private CompatibilityViewExpected() {
+    private CompatibilityViewExpected() {
     }
     
     public static CompatibilityViewExpected getInstance() {

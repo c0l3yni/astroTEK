@@ -5,15 +5,15 @@ import com.softwareonpurpose.calibrator4test.Calibrator;
 public class CompatibilityViewCalibrator extends Calibrator {
     private static final String DESCRIPTION = "'Compatibility' view";
     private final CompatibilityViewExpected expected;
-    private final MemberLandingView actual;
+    private final CompatibilityView actual;
     
-    private CompatibilityViewCalibrator(CompatibilityViewExpected expected, MemberLandingView actual) {
+    private CompatibilityViewCalibrator(CompatibilityViewExpected expected, CompatibilityView actual) {
         super(DESCRIPTION, expected, actual);
         this.actual = actual;
         this.expected = expected;
     }
     
-    public static CompatibilityViewCalibrator getInstance(CompatibilityViewExpected expected, MemberLandingView actual) {
+    public static CompatibilityViewCalibrator getInstance(CompatibilityViewExpected expected, CompatibilityView actual) {
         return new CompatibilityViewCalibrator(expected, actual);
     }
     

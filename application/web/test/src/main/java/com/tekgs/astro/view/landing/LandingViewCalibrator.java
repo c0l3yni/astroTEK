@@ -21,6 +21,6 @@ public class LandingViewCalibrator extends Calibrator {
     
     @Override
     protected void executeVerifications() {
-        verify("'Landing' heading", expected.getHeading(), actual.getHeading());
+        verify("'Landing' heading", this.expected.getHeading(), this.actual.getHeading());
     }
 }

@@ -6,17 +6,24 @@ public interface SignCalibratable {
     String getDescription();
     
     String getId();
-
+    
     String getStartDate();
+    
     String getEndDate();
+    
     String getTarotCard();
+    
     String getSignElement();
+    
     String getRulingPlanet();
+    
     String getRulingHouse();
+    
     String getColor();
+    
     String getSisterSign();
+    
     String getModality();
-
-
+    
     boolean equivalent(SignCalibratable comparator);
 }

@@ -4,7 +4,7 @@ import com.tekgs.astro.view.landing.LandingView;
 import org.softwareonpurpose.softwaregauntlet.GauntletTest;
 import org.testng.annotations.Test;
 
-@Test(groups = {GauntletTest.Application.ASTRO_TEK, GauntletTest.View.DEMOGRAPHIC})
+@Test(groups = {GauntletTest.Application.ASTRO_TEK, GauntletTest.View.DEMOGRAPHICS})
 public class DemographicsViewTests extends GauntletTest {
     
     @Test(groups = {TestSuite.SMOKE})
