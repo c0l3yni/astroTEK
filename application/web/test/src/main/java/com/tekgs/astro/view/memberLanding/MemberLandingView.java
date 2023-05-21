@@ -5,7 +5,7 @@ import com.softwareonpurpose.uinavigator.UiLocatorType;
 import com.softwareonpurpose.uinavigator.UiView;
 import org.softwareonpurpose.softwaregauntlet.Environment;
 
-public class MemberLandingView extends UiView {
+public class MemberLandingView extends UiView implements MemberLandingViewCalibratable{
     private static final String DOMAIN_URI = Environment.getInstance().getDomainURL();
     private static final String RELATIVE_URI = "member-landing";
     private static final String DESCRIPTION = "'Member Landing' view";
@@ -20,6 +20,15 @@ public class MemberLandingView extends UiView {
     public static MemberLandingView directNav() {
         new MemberLandingView().load();
         return UiView.expect(MemberLandingView.class);
+    }
+    
+    @Override
+    public String getHeading() {
+        return this.getViewTitleElement().getText();
+    }
+    
+    private UiElement getViewTitleElement() {
+        return UiElement.getInstance("'Member Landing' view", UiLocatorType.ID, "member-landing-title", this.getElement());
     }
     
     @Override

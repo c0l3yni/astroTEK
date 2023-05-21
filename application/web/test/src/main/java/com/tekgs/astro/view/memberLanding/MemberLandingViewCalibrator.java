@@ -5,6 +5,8 @@ import com.softwareonpurpose.calibrator4test.Calibrator;
 public class MemberLandingViewCalibrator extends Calibrator {
     
     private static final String DESCRIPTION = "'Member Landing' view";
+    private MemberLandingViewExpected expected;
+    private MemberLandingView actual;
     
     protected MemberLandingViewCalibrator(MemberLandingViewExpected expected, MemberLandingView actual) {
         super(DESCRIPTION, expected, actual);
@@ -16,6 +18,6 @@ public class MemberLandingViewCalibrator extends Calibrator {
     
     @Override
     protected void executeVerifications() {
-    
+        verify("'Member Landing' heading", this.expected.getHeading(), this.actual.getHeading());
     }
 }
