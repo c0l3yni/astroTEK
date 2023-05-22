@@ -21,5 +21,6 @@ public class MemberLandingViewCalibrator extends Calibrator {
     @Override
     protected void executeVerifications() {
         verify("'Member Landing' heading", this.expected.getHeading(), this.actual.getHeading());
+        verify("'Welcome' message", this.expected.getWelcomeMessage(), this.actual.getWelcomeMessage());
     }
 }

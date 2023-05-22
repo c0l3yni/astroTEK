@@ -26,9 +26,18 @@ public class MemberLandingView extends UiView implements MemberLandingViewCalibr
         return UiElement.getInstance("'Member Landing' view", UiLocatorType.ID, "member-landing-heading", this.getElement());
     }
     
+    private UiElement getWelcomeMessageElement() {
+        return UiElement.getInstance("'Welcome' message", UiLocatorType.ID, "welcome-message", this.getElement());
+    }
+    
     @Override
     public String getHeading() {
         return this.getHeadingElement().getText();
+    }
+    
+    @Override
+    public String getWelcomeMessage() {
+        return this.getWelcomeMessageElement().getText();
     }
     
     @Override
