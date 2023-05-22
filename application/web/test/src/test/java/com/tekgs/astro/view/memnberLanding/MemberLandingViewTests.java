@@ -1,7 +1,6 @@
 package com.tekgs.astro.view.memnberLanding;
 
-import com.tekgs.astro.data.user.User;
-import com.tekgs.astro.data.user.UserProvider;
+import com.tekgs.astro.data.user.UserDefinition;
 import com.tekgs.astro.view.login.LoginView;
 import com.tekgs.astro.view.memberLanding.MemberLandingView;
 import com.tekgs.astro.view.memberLanding.MemberLandingViewCalibrator;
@@ -18,11 +17,11 @@ public class MemberLandingViewTests extends GauntletTest {
         then(MemberLandingViewCalibrator.getInstance(expected, actual));
     }
     
-    @Test(groups = {TestSuite.SMOKE, TestSuite.DEBUG})
+    @Test(groups = {TestSuite.ACCEPTANCE, TestSuite.DEBUG})
     public void fromLoginView() {
-        User user = UserProvider.getInstance().get();
-        MemberLandingViewExpected expected = MemberLandingViewExpected.getInstance();
-        MemberLandingView actual = LoginView.directNav().submitLogin(user);
+        UserDefinition loginAttempt = UserDefinition.getInstance().withUsername("user").withPassword("pass");
+        MemberLandingViewExpected expected = MemberLandingViewExpected.getInstance(loginAttempt);
+        MemberLandingView actual = LoginView.directNav().submitLogin(loginAttempt);
         then(MemberLandingViewCalibrator.getInstance(expected, actual));
     }
 }
