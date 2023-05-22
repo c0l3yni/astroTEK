@@ -5,12 +5,19 @@ import java.util.List;
 public class UserProvider {
     UserRepository userRepository = UserRepository.getInstance();
     
+    private UserProvider() {
+    }
+    
     public static UserProvider getInstance() {
         return new UserProvider();
     }
     
     public User get() {
         return this.userRepository.query(UserDefinition.getInstance());
+    }
+    
+    public User get(UserDefinition userDefinition) {
+        return this.userRepository.query(userDefinition);
     }
     
     public List<User> getAll() {
