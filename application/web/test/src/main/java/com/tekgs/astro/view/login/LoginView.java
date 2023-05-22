@@ -3,7 +3,7 @@ package com.tekgs.astro.view.login;
 import com.softwareonpurpose.uinavigator.UiElement;
 import com.softwareonpurpose.uinavigator.UiLocatorType;
 import com.softwareonpurpose.uinavigator.UiView;
-import com.tekgs.astro.data.user.User;
+import com.tekgs.astro.data.user.UserDefinition;
 import com.tekgs.astro.view.memberLanding.MemberLandingView;
 import org.softwareonpurpose.softwaregauntlet.Environment;
 
@@ -23,7 +23,7 @@ public class LoginView extends UiView implements LoginViewCalibratable {
         return UiView.expect(LoginView.class);
     }
 
-    public MemberLandingView submitLogin(User user) {
+    public MemberLandingView submitLogin(UserDefinition user) {
         this.getUsernameInputElement().set(user.getUsername());
         this.getPasswordInputElement().set(user.getPassword());
         this.getLoginButtonElement().click();
