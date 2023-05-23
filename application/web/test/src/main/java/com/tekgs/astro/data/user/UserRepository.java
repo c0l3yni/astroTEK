@@ -20,7 +20,6 @@ public class UserRepository {
     public User query(UserDefinition comparator) {
         for (User candidate : this.query()) {
             if (candidate.equivalent(comparator)) {
-                System.out.println(candidate);
                 return candidate;
             }
         }

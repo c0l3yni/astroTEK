@@ -10,7 +10,8 @@ public class MemberLandingViewExpected implements MemberLandingViewCalibratable 
     
     private MemberLandingViewExpected(UserDefinition loginAttempt) {
         this.loginAttempt = loginAttempt;
-        this.user = UserProvider.getInstance().get(UserDefinition.getInstance().withUsername(loginAttempt.getUsername()));
+        this.user = this.loginAttempt == null ? null : UserProvider.getInstance().get(UserDefinition.getInstance().withUsername(this.loginAttempt.getUsername()));
+        
     }
     
     public static MemberLandingViewExpected getInstance() {

@@ -1,5 +1,6 @@
 package com.tekgs.astro.data.user;
 
+@SuppressWarnings("unused") //  Gson is used to populate the fields
 public class UserDefinition implements UserCalibratable {
     private String id;
     private String username;
@@ -8,12 +9,7 @@ public class UserDefinition implements UserCalibratable {
     public static UserDefinition getInstance() {
         return new UserDefinition();
     }
-    
-    public UserDefinition withId(String id) {
-        this.id = id;
-        return this;
-    }
-    
+
     public UserDefinition withUsername(String username) {
         this.username = username;
         return this;

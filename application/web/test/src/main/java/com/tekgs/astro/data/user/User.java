@@ -1,5 +1,6 @@
 package com.tekgs.astro.data.user;
 
+@SuppressWarnings("unused") //  Gson is used to populate the fields
 public class User implements UserCalibratable {
     private String id;
     private String username;
@@ -25,11 +26,11 @@ public class User implements UserCalibratable {
         if (comparator == null) {
             return false;
         }
-        if (this.id != null & this.id.equals(comparator.getId())) {
+        if (this.getId() != null & this.getId().equals(comparator.getId())) {
             return true;
         }
-        boolean isEquivalent = comparator.getUsername() == null || this.username.equals(comparator.getUsername());
-        isEquivalent &= comparator.getPassword() == null || this.password.equals(comparator.getPassword());
+        boolean isEquivalent = comparator.getUsername() == null || this.getUsername().equals(comparator.getUsername());
+        isEquivalent &= comparator.getPassword() == null || this.getPassword().equals(comparator.getPassword());
         
         return isEquivalent;
     }

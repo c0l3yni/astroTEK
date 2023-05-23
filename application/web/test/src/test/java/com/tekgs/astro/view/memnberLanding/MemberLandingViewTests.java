@@ -10,17 +10,19 @@ import org.testng.annotations.Test;
 
 @Test(groups = {GauntletTest.Application.ASTRO_TEK, GauntletTest.View.MEMBER_LANDING})
 public class MemberLandingViewTests extends GauntletTest {
-    @Test(groups = {TestSuite.SMOKE, TestSuite.DEBUG})
+    @Test(groups = {TestSuite.SMOKE})
     public void smoke() {
         MemberLandingViewExpected expected = MemberLandingViewExpected.getInstance();
         MemberLandingView actual = MemberLandingView.directNav();
         then(MemberLandingViewCalibrator.getInstance(expected, actual));
     }
     
-    @Test(groups = {TestSuite.ACCEPTANCE, TestSuite.DEBUG})
+    @Test(groups = {TestSuite.ACCEPTANCE, TestSuite.DEBUG}, dependsOnMethods = "smoke")
     public void fromLoginView() {
         UserDefinition loginAttempt = UserDefinition.getInstance().withUsername("user").withPassword("pass");
+        given(loginAttempt);
         MemberLandingViewExpected expected = MemberLandingViewExpected.getInstance(loginAttempt);
+        when();
         MemberLandingView actual = LoginView.directNav().submitLogin(loginAttempt);
         then(MemberLandingViewCalibrator.getInstance(expected, actual));
     }

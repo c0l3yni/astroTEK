@@ -20,7 +20,6 @@ public class SignRepository {
     public Sign query(SignDefinition comparator) {
         for (Sign candidate : this.query()) {
             if (candidate.equivalent(comparator)) {
-                System.out.println(candidate);
                 return candidate;
             }
         }
