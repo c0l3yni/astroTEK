@@ -22,12 +22,16 @@ public class LoginView extends UiView implements LoginViewCalibratable {
         new LoginView().load();
         return UiView.expect(LoginView.class);
     }
-
+    
     public MemberLandingView submitLogin(UserDefinition user) {
         this.getUsernameInputElement().set(user.getUsername());
         this.getPasswordInputElement().set(user.getPassword());
         this.getLoginButtonElement().click();
         return UiView.expect(MemberLandingView.class);
+    }
+    
+    private UiElement getHeadingElement() {
+        return UiElement.getInstance("'Login' heading", UiLocatorType.ID, "login-heading", this.getElement());
     }
     
     private UiElement getUsernameInputElement() {
@@ -40,10 +44,6 @@ public class LoginView extends UiView implements LoginViewCalibratable {
     
     private UiElement getLoginButtonElement() {
         return UiElement.getInstance("'Login' button", UiLocatorType.ID, "login-button", this.getElement());
-    }
-    
-    private UiElement getHeadingElement() {
-        return UiElement.getInstance("'Login' heading", UiLocatorType.ID, "login-heading", this.getElement());
     }
     
     @Override
